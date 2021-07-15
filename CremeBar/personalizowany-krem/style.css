@@ -188,14 +188,11 @@ body {
 
 @media (max-width: 650px) {
     .personalizedCream__bar {
-        width: 90vw;
+        width: 100vw;
         height: 100px;
-        border-radius: 10px;
-        background: rgb(141, 231, 50);
-        background: linear-gradient(90deg, rgba(141, 231, 50, 1) 0%, rgba(170, 242, 97, 1) 85%);
-        box-shadow: var(--basicShadow);
-        text-transform: uppercase;
-        line-height: 49px;
+     
+    
+        line-height: 100px;
         padding: 0 20px;
         margin: 20px 0;
     }
