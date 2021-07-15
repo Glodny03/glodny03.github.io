@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap);
+    @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+    @import url(https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap);
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #ffefdc;
+    }
+
+    .textContent34 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        width: 100vw;
+        border: 2px solid red;
+    }
+
+    .buttons34 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn34 {
+        font-family: 'Poppins', sans-serif;
+        width: 25%;
+        padding: 20px 0;
+        border: none;
+        color: #fff;
+        font-size: 25px;
+    }
+</style>
+
+<body>
+    <div class="textContent34">
+
+        <div class="buttons34">
+            <button class="btn34">One</button>
+            <button class="btn34">Two</button>
+            <button class="btn34">Three</button>
+            <button class="btn34">Four</button>
+        </div>
+    </div>
+
+    <script>
+        const buttons34 = document.querySelectorAll('.btn34');
+        const pastelColors = ['E0BBE4', '#957DAD', 'D291BC', 'FEC8D8', 'FFDFD3'];
+        let getRandomNumber = () => {
+            return Math.floor(Math.random() * (pastelColors.length - 0 + 1)) + 0;
+        }
+
+        // const getRandomColor = () => {
+        //     return `rgb(${getRandomNumber()} , ${getRandomNumber()}, 0)`;
+        // }
+
+        buttons34.forEach(element => {
+            element.style.backgroundColor = `#${pastelColors[getRandomNumber()]}`;
+        });
+        
+    </script>
+</body>
+
+</html>
