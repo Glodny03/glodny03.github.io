@@ -197,7 +197,7 @@ body {
     .mobileElement {
         display: none;
     }
-
+    
     .personalizedCream__miniMobilePanel {
         display: none;
     }
@@ -249,9 +249,8 @@ body {
         width: 68px;
         font-size: 22px
     }
-
     .personalizedCream__editPanel {
-        display: none;
+        display: none;   
     }
 
     .personalizedCream__flexContainer {
@@ -263,14 +262,11 @@ body {
         height: 40px;
     }
 
-    .personalizedCream__informationAboutCreams {
-        height: 60px;
-    }
-
-    .personalizedCream__miniMobilePanel {
-        padding-bottom: 15px;
+    .personalizedCream__flexContainer {
+        padding: 8px;
+        margin: 8px;
         border-bottom: 2px solid var(--greenCB);
-        margin: 15px;
     }
 
+   
 }
