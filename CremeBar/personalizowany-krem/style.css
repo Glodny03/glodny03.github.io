@@ -162,7 +162,7 @@ body {
 }
 
 .personalizedCream__changeValueBtn:active {
-    color: #000
+    background-color: rgb(120, 194, 47);
 }
 
 .personalizedCream__changeValueBtn--add {
@@ -192,6 +192,14 @@ body {
     .personalizedCream__bar {
         height: 49px;
         line-height: 49px
+    }
+
+    .mobileElement {
+        display: none;
+    }
+
+    .personalizedCream__miniMobilePanel {
+        display: none;
     }
 }
 
@@ -234,11 +242,35 @@ body {
 
     .personalizedCream__allPanels {
         width: 100vw;
-        justify-content: space-evenly;
+        justify-content: space-evenly
     }
 
     .personalizedCream__placeForValue {
         width: 68px;
-        font-size: 22px;
+        font-size: 22px
     }
+
+    .personalizedCream__editPanel {
+        display: none;
+    }
+
+    .personalizedCream__flexContainer {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .personalizedCream--low {
+        height: 40px;
+    }
+
+    .personalizedCream__informationAboutCreams {
+        height: 60px;
+    }
+
+    .personalizedCream__miniMobilePanel {
+        padding-bottom: 15px;
+        border-bottom: 2px solid var(--greenCB);
+        margin: 15px;
+    }
+
 }
