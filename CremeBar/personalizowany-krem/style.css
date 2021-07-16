@@ -201,24 +201,32 @@ body {
         border-radius: 0px;
         text-align: center;
     }
-    
-    .personalizedCream__bar span {
-        background-color: rgb(255, 255, 255);
-        color: var(--greenCB);
-        border-radius: 6px;
-        padding: 3px 13px;
-        font-size: 24px;
-        margin-right: 15px;
-        -moz-box-shadow: inset rgba(149, 157, 165, 0.2) 0px 4px 10px;
-        -webkit-box-shadow: inset rgba(149, 157, 165, 0.2) 0px 4px 10px;
-        box-shadow: inset rgba(149, 157, 165, 0.2) 0px 4px 10px;
+
+    .personalizedCream__Biomembrane {
+        flex-wrap: wrap;
+    }
+
+
+.personalizedCream__Biomembrane {
+    max-width: 100vw;
+    box-shadow: var(--basicShadow);
+    padding: 25px 0;
+    border-radius: 15px;
+}
+
+.personalizedCream__informationAboutCreams {
+    font-size: 22px;
+}
+
+.personalizedCream__staticInfo, .personalizedCream__informationAboutCreams {
+    width: 95vw;
+    height: 100px;
+}
+
+.personalizedCream__staticInfo p {
+    font-size: 22px;
+
     
     }
-    
-    .personalizedCream__bar p {
-        font-family: 'Montserrat', sans-serif;
-        color: rgb(255, 255, 255);
-        font-weight: 600;
-        font-size: 19px;
-    }
+
 }
