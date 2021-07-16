@@ -215,7 +215,7 @@ body {
 }
 
 .personalizedCream__informationAboutCreams {
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .personalizedCream__staticInfo, .personalizedCream__informationAboutCreams {
@@ -224,7 +224,7 @@ body {
 }
 
 .personalizedCream__staticInfo p {
-    font-size: 22px;
+    font-size: 15px;
 
     
     }
