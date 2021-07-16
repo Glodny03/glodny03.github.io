@@ -14,6 +14,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: default;
+}
+
+*::selection {
+    background: transparent;
 }
 
 body {
@@ -43,10 +48,10 @@ body {
     padding: 3px 13px;
     font-size: 24px;
     margin-right: 15px;
-    -moz-box-shadow:    inset rgba(149, 157, 165, 0.2) 0px 4px 10px;
-   -webkit-box-shadow: inset rgba(149, 157, 165, 0.2) 0px 4px 10px;
-   box-shadow:         inset rgba(149, 157, 165, 0.2) 0px 4px 10px;
-    
+    -moz-box-shadow: inset rgba(149, 157, 165, 0.2) 0px 4px 10px;
+    -webkit-box-shadow: inset rgba(149, 157, 165, 0.2) 0px 4px 10px;
+    box-shadow: inset rgba(149, 157, 165, 0.2) 0px 4px 10px;
+
 }
 
 .personalizedCream__bar p {
@@ -161,6 +166,10 @@ body {
     color: black;
 }
 
+.personalizedCream__changeValueBtn:active {
+    color: black;
+}
+
 .personalizedCream__changeValueBtn--add {
     border-top-right-radius: 10px;
 }
@@ -189,14 +198,10 @@ body {
 @media (max-width: 650px) {
     .personalizedCream__bar {
         width: 100vw;
-        height: 100px;
-     
-    
-        line-height: 100px;
-        padding: 0 20px;
-        margin: 20px 0;
+        border-radius: 0px;
+        text-align: center;
     }
-
+    
     .personalizedCream__bar span {
         background-color: rgb(255, 255, 255);
         color: var(--greenCB);
@@ -204,8 +209,12 @@ body {
         padding: 3px 13px;
         font-size: 24px;
         margin-right: 15px;
+        -moz-box-shadow: inset rgba(149, 157, 165, 0.2) 0px 4px 10px;
+        -webkit-box-shadow: inset rgba(149, 157, 165, 0.2) 0px 4px 10px;
+        box-shadow: inset rgba(149, 157, 165, 0.2) 0px 4px 10px;
+    
     }
-
+    
     .personalizedCream__bar p {
         font-family: 'Montserrat', sans-serif;
         color: rgb(255, 255, 255);
