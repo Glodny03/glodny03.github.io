@@ -208,7 +208,7 @@ body {
     color: #747474
 }
 
-.personalizedCream__amountOfPossibleSubstances {
+.personalizedCream__classicButton {
     width: 380px;
     height: 50px;
     display: flex;
@@ -216,15 +216,36 @@ body {
     align-items: center;
     color: #fff;
     border-radius: 10px;
-    background: #8de732;
-    background-color: linear-gradient(90deg, #8de732 0, #aaf261 85%);
     font-family: Montserrat;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 15px;
     box-shadow: var(--basicShadow);
     cursor: pointer;
-    transition: .4s
+    background: #8de732;
+    background: linear-gradient(90deg, #8de732 0, #aaf261 85%);
+    transition: .7s;
+
+}
+
+.personalizedCream__classicButton--addToCart {
+    margin: 15px 0;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: none;
+    position: relative;
+    left: 100%;
+    transform: translateX(-100%);
+}
+
+.personalizedCream__classicButton:hover {
+    background: #2dd164;
+}
+
+.personalizedCream__classicButton:active {
+    background: #039634;
+
 }
 
 .personalizedCream__amountOfPossibleSubstances:hover {
@@ -235,6 +256,7 @@ body {
     background-color: #408000
 }
 
+
 .personalizedCream__completeOrder {
     flex-direction: column;
     padding: 25px 20px;
@@ -242,7 +264,8 @@ body {
 }
 
 .personalizedCream__orderTitles,
-.personalizedCream__productInOrder {
+.personalizedCream__productInOrder,
+.personalizedCream__summary {
     display: flex;
     width: 100%;
     font-weight: 500;
@@ -250,6 +273,14 @@ body {
     color: #3a3a3a;
     justify-content: space-between;
     margin: 11px 0
+}
+
+.personalizedCream__summary {
+    margin-top: 30px;
+}
+
+.personalizedCream__summary .personalizedCream__cell:nth-child(4) {
+font-size: 22px;
 }
 
 .personalizedCream__productInOrder {
@@ -335,6 +366,10 @@ body {
     justify-content: center;
     text-align: center;
     width: 25%
+}
+
+.personalizedCream__productInOrder div:nth-child(4) {
+    font-weight: 600;
 }
 
 @media (min-width:650px) {
