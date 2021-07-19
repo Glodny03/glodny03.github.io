@@ -164,8 +164,8 @@ body {
 }
 
 .personalizedCream__changeValueBtn:active {
-    background-color: rgb(120, 194, 47);
-    color: rgb(255, 255, 255);
+    background-color: #78c22f;
+    color: #fff
 }
 
 .personalizedCream__changeValueBtn--add {
@@ -192,20 +192,20 @@ body {
 }
 
 .personalizedCream__activeSubstances {
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .placeForValue--long {
     width: 340px;
     font-size: 15px;
     text-align: left;
-    padding-left: 20px;
+    padding-left: 20px
 }
 
 .placeForValue__classic {
     border-radius: 10px;
     width: 294px;
-    color: #747474;
+    color: #747474
 }
 
 .personalizedCream__amountOfPossibleSubstances {
@@ -218,27 +218,27 @@ body {
     border-radius: 10px;
     background: #8de732;
     background-color: linear-gradient(90deg, #8de732 0, #aaf261 85%);
-    font-family: "Montserrat";
+    font-family: Montserrat;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 15px;
     box-shadow: var(--basicShadow);
     cursor: pointer;
-    transition: 0.4s;
+    transition: .4s
 }
 
 .personalizedCream__amountOfPossibleSubstances:hover {
-    background-color: #83d431;
+    background-color: #83d431
 }
 
 .personalizedCream__amountOfPossibleSubstances:active {
-    background-color: #408000;
+    background-color: #408000
 }
 
 .personalizedCream__completeOrder {
     flex-direction: column;
     padding: 25px 20px;
-    font-family: 'Montserrat';
+    font-family: Montserrat
 }
 
 .personalizedCream__orderTitles,
@@ -247,14 +247,17 @@ body {
     width: 100%;
     font-weight: 500;
     font-size: 15px;
-    color: #3A3A3A;
+    color: #3a3a3a;
     justify-content: space-between;
-    margin: 11px 0;
+    margin: 11px 0
 }
 
 .personalizedCream__productInOrder {
     font-weight: 400;
     font-size: 13px;
+    border-top: 2px solid #C4C4C4;
+    padding-top: 15px;
+
 }
 
 .cremeBar__hidden {
@@ -266,43 +269,43 @@ body {
     top: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #fff;
+    background-color: #fff
 }
 
 .cremeBar__hidden__card {
     display: flex;
     justify-content: space-around;
-    align-items:center;
+    align-items: center;
     flex-direction: column;
     width: 90vw;
     height: 90vh;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, .25) 0 6px 12px -2px, rgba(0, 0, 0, .3) 0 3px 7px -3px;
+    border-radius: 10px
 }
 
+.cremeBar__hidden__card button,
 .cremeBar__hidden__card h1,
-.cremeBar__hidden__card p,
-.cremeBar__hidden__card button {
-    font-family: 'Montserrat', sans-serif;
+.cremeBar__hidden__card p {
+    font-family: Montserrat, sans-serif
 }
 
 .cremeBar__hidden__card h1,
 .cremeBar__hidden__card p {
     font-weight: 500;
     font-size: 28px;
-    font-weight: 500;
+    font-weight: 500
 }
 
 .cremeBar__hidden__card p {
     font-size: 19px;
-    max-width: 70%;
+    max-width: 70%
 }
 
 .cremeBar__hidden__bar {
     width: 120px;
     height: 5px;
-    background-color: #AAF261;
-    margin: 25px 0;
+    background-color: #aaf261;
+    margin: 25px 0
 }
 
 .cremeBar__hidden__Content {
@@ -310,7 +313,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;
+    text-align: center
 }
 
 .cremeBar__hidden__card button {
@@ -320,15 +323,20 @@ body {
     border-radius: 10px;
     text-transform: uppercase;
     letter-spacing: 1.2px;
-    color: white;
+    color: #fff;
     border: none;
     font-size: 24px;
     font-weight: 600;
-    box-shadow: var(--basicShadow);
+    box-shadow: var(--basicShadow)
 }
 
+.personalizedCream__cell {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 25%
+}
 
-/* MOBILE VERSION START */
 @media (min-width:650px) {
     .personalizedCream__bar {
         height: 49px;
@@ -336,11 +344,11 @@ body {
     }
 
     .mobileElement {
-        display: none;
+        display: none
     }
 
     .personalizedCream__miniMobilePanel {
-        display: none;
+        display: none
     }
 }
 
@@ -392,30 +400,25 @@ body {
     }
 
     .personalizedCream__editPanel {
-        display: none;
+        display: none
     }
 
     .personalizedCream__flexContainer {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-around
     }
 
     .personalizedCream--low {
-        height: 40px;
+        height: 40px
     }
 
     .personalizedCream__flexContainer {
         padding: 8px;
         margin: 8px;
-        border-bottom: 2px solid var(--greenCB);
+        border-bottom: 2px solid var(--greenCB)
     }
 
-  
-    
     .cremeBar__hidden {
-        display: flex;
- 
+        display: flex
     }
 }
-
-/* MOBILE VERSION END */
