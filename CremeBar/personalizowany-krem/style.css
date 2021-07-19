@@ -491,7 +491,9 @@ body {
     transition: .8s;
     width: 300px;
     text-align: center;
-    line-height: 20px
+    line-height: 20px;
+    z-index: 1;
+
 }
 
 .personalizedCream__placeForValue i {
@@ -518,7 +520,6 @@ body {
 
 .personalizedCream__placeForValue i:hover .personalizedCream__placeForValue__info {
     opacity: 1;
-    z-index: 1;
     margin-top: 10px
 }
 
