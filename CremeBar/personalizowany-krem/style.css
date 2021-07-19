@@ -310,7 +310,9 @@ body {
 @media (max-width: 650px) {
     body {
         overflow: hidden;
-        
+        width: 100vw;
+        height: 100vh;
+
     }
 }
 
