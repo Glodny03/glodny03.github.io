@@ -307,14 +307,6 @@ body {
     z-index: 3;
 }
 
-@media (max-width: 650px) {
-    body {
-        overflow: hidden;
-        width: 100vw;
-        height: 100vh;
-
-    }
-}
 
 .cremeBar__hidden__card {
     display: flex;
@@ -475,7 +467,6 @@ body {
 .personalizedCream__placeForValue__info {
     position: absolute;
     padding: 0 15px;
-    z-index: -1;
     border-radius: 10px;
     background: #8de732;
     background: linear-gradient(90deg, #8de732 0, #00c21a 85%);
@@ -488,13 +479,13 @@ body {
     margin-top: -20px;
     margin-left: 30px;
     opacity: 0;
-    transition: .8s;
+    transition: .4s;
     width: 300px;
     text-align: center;
     line-height: 20px;
-    z-index: 1;
-
+    z-index: -1;
 }
+
 
 .personalizedCream__placeForValue i {
     background: #8de732;
@@ -519,6 +510,7 @@ body {
 }
 
 .personalizedCream__placeForValue i:hover .personalizedCream__placeForValue__info {
+   z-index: 3331;
     opacity: 1;
     margin-top: 10px
 }
