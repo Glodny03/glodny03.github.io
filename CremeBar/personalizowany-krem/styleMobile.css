@@ -1,0 +1,87 @@
+
+
+@media (min-width:650px) {
+    .personalizedCream__bar {
+        height: 49px;
+        line-height: 49px
+    }
+
+    .mobileElement {
+        display: none
+    }
+
+    .personalizedCream__miniMobilePanel {
+        display: none
+    }
+}
+
+@media (max-width:650px) {
+    .personalizedCream__bar {
+        width: 100vw;
+        border-radius: 0;
+        text-align: center;
+        padding: 10px 20px
+    }
+
+    .personalizedCream__bar span {
+        display: none
+    }
+
+    .personalizedCream__Biomembrane {
+        flex-wrap: wrap
+    }
+
+    .personalizedCream__Biomembrane {
+        max-width: 100vw;
+        box-shadow: var(--basicShadow);
+        padding: 25px 0;
+        border-radius: 15px
+    }
+
+    .personalizedCream__informationAboutCreams {
+        font-size: 14px
+    }
+
+    .personalizedCream__informationAboutCreams,
+    .personalizedCream__staticInfo {
+        width: 95vw;
+        height: 100px
+    }
+
+    .personalizedCream__staticInfo p {
+        font-size: 15px
+    }
+
+    .personalizedCream__allPanels {
+        width: 100vw;
+        justify-content: space-evenly
+    }
+
+    .personalizedCream__placeForValue {
+        width: 68px;
+        font-size: 22px
+    }
+
+    .personalizedCream__editPanel {
+        display: none
+    }
+
+    .personalizedCream__flexContainer {
+        display: flex;
+        justify-content: space-around
+    }
+
+    .personalizedCream--low {
+        height: 40px
+    }
+
+    .personalizedCream__flexContainer {
+        padding: 8px;
+        margin: 8px;
+        border-bottom: 2px solid var(--greenCB)
+    }
+
+    .cremeBar__hidden {
+        display: flex
+    }
+}
