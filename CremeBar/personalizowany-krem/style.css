@@ -407,7 +407,8 @@ body {
 }
 
 .cremeBar__menu__logo {
-    width: 120px
+    width: 120px;
+    cursor: pointer;
 }
 
 .Eprom_SocialMedia_v1-icons {
@@ -432,10 +433,12 @@ body {
 }
 
 .Eprom_SocialMedia_v1-icons a {
-    display: inline-block
+    display: inline-block;
+    cursor: pointer;
 }
 
 .Eprom_SocialMedia_v1-icons a:before {
+
     transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
@@ -449,11 +452,14 @@ body {
 }
 
 .Eprom_SocialMedia_v1-icons a:hover:before {
+
     transform: scale(0);
     transition: all 265ms ease-in
 }
 
 .Eprom_SocialMedia_v1-icons a:hover i {
+    cursor: pointer;
+
     transform: scale(2.2);
     -ms-transform: scale(2.2);
     -webkit-transform: scale(2.2);
@@ -523,3 +529,9 @@ body {
     margin-top: 15px
 }
 
+@media (max-width: 650px) {
+ body {
+     overflow: hidden;
+     
+ }
+}
