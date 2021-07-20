@@ -3,7 +3,7 @@
 :root {
     --background: #fdfdfd;
     --greenCB: rgba(141, 231, 50, 1);
-    --barWidth: 850px;
+    --barWidth:60vw;
     --basicShadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     --basicColor: #3A3A3A;
     --greyColor: #F9F9F9
@@ -548,7 +548,7 @@ body {
     border-radius: 10px;
     background: #8de732;
     background: linear-gradient(90deg, #8de732 0, #aaf261 85%);
-    width: 310px;
+    width: 23vw ;
     height: 47px;
     line-height: 47px;
     text-align: left;
@@ -560,12 +560,12 @@ body {
     padding: 0 30px;
     font-weight: 600;
     box-shadow: var(--basicShadow);
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
 
 .cremeBar__categoriesMenu {
     background-color: rgb(255, 255, 255);
-    width: 310px;
+    width: 23vw ;
     border-radius: 10px;
     box-shadow: var(--basicShadow);
     color: #3A3A3A;
