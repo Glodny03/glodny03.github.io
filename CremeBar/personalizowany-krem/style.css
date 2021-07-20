@@ -3,7 +3,7 @@
 :root {
     --background: #fdfdfd;
     --greenCB: rgba(141, 231, 50, 1);
-    --barWidth: 788px;
+    --barWidth: 850px;
     --basicShadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     --basicColor: #3A3A3A;
     --greyColor: #F9F9F9
@@ -73,6 +73,10 @@ body {
     box-shadow: var(--basicShadow);
     padding: 25px 0;
     border-radius: 15px
+}
+
+.personalizedCream__activeSubstances {
+    padding: 0;
 }
 
 .personalizedCream__editPanel {
@@ -216,7 +220,7 @@ body {
 }
 
 .personalizedCream__classicButton {
-    width: 380px;
+    width: 100%;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -245,11 +249,11 @@ body {
     transform: translateX(-100%)
 }
 
-.personalizedCream__classicButton:hover {
+.personalizedCream__classicButton--hoverOn:hover {
     background: #2dd164
 }
 
-.personalizedCream__classicButton:active {
+.personalizedCream__classicButton--hoverOn:active {
     background: #039634
 }
 
@@ -260,6 +264,7 @@ body {
 .personalizedCream__amountOfPossibleSubstances:active {
     background-color: #408000
 }
+
 
 .personalizedCream__completeOrder {
     flex-direction: column;
@@ -377,6 +382,8 @@ body {
     font-weight: 600
 }
 
+/* MENU  */
+
 .cremeBar__menu {
     display: flex;
     justify-content: space-around;
@@ -483,7 +490,7 @@ body {
     font-family: Montserrat;
     font-weight: 500;
     margin-top: -20px;
-    margin-left: 30px;
+    margin-left: -310px;
     opacity: 0;
     transition: .4s;
     width: 300px;
@@ -516,7 +523,7 @@ body {
 }
 
 .personalizedCream__placeForValue i:hover .personalizedCream__placeForValue__info {
-   z-index: 3331;
+    z-index: 3331;
     opacity: 1;
     margin-top: 10px
 }
@@ -529,9 +536,88 @@ body {
     margin-top: 15px
 }
 
-@media (max-width: 650px) {
- body {
-     overflow: hidden;
-     
- }
+.cremeBar__categories__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 130px;
 }
+
+.cremeBar__categoriesTitle {
+    border-radius: 10px;
+    background: #8de732;
+    background: linear-gradient(90deg, #8de732 0, #aaf261 85%);
+    width: 310px;
+    height: 47px;
+    line-height: 47px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 0 30px;
+    font-weight: 600;
+    box-shadow: var(--basicShadow);
+    margin: 10px 0;
+}
+
+.cremeBar__categoriesMenu {
+    background-color: rgb(255, 255, 255);
+    width: 310px;
+    border-radius: 10px;
+    box-shadow: var(--basicShadow);
+    color: #3A3A3A;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.cremeBar__categoriesMenu__cell {
+    width: 100%;
+    text-align: left;
+    padding: 17px 0;
+    border-bottom: 2px solid #E1E1E1;
+}
+
+.cremeBar__categoriesMenu__cell:nth-child(12) { 
+    border-bottom: none;
+}
+
+.cremeBar--bold {
+    font-weight: 600;
+}
+
+
+
+.cremeBar__categoriesMenu a {
+    height: 30px;
+    width: 100%;
+    text-decoration: none;
+    color:  #3A3A3A;;
+    padding: 10px 0;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.cremeBar__categoriesMenu a:hover {
+    color: rgb(96, 184, 8);
+}
+
+/* ROW CONTAINER  */
+.rowContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 85vw;
+
+}
+
+@media (max-width: 650px) {
+    body {
+        overflow: hidden;
+
+    }
+}
+
