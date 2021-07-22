@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap);
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:wght@200;300;400;500;600;700&display=swap');
 
 :root {
     --background: #fdfdfd;
@@ -90,12 +90,13 @@ body {
 
 .personalizedCream__informationAboutCreams,
 .personalizedCream__staticInfo {
-    width: 450px;
+    width: 39vw;
     height: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    text-align: center
+    text-align: center;
+    text-align: center;
 }
 
 .personalizedCream__informationAboutCreams {
@@ -472,7 +473,6 @@ body {
 
 .Eprom_SocialMedia_v1-icons a:hover i {
     cursor: pointer;
-
     transform: scale(2.2);
     -ms-transform: scale(2.2);
     -webkit-transform: scale(2.2);
@@ -719,17 +719,18 @@ body {
 }
 
 .slider18Wrapper--element:nth-child(1):before {
+    background-image: url('./assets//Projekt\ bez\ tytułu.jpg');
     background-color: #e60000;
-    background-image: url(https://images.pexels.com/photos/38012/pexels-photo-38012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
 }
 
 .hide-images .slider18Wrapper--element:nth-child(1):before {
-    background-image: none;
+    background-image: url('./assets//Projekt\ bez\ tytułu.jpg');
+
 }
 
 .slider18Wrapper--element:first-child:before,
 .slider18Wrapper--element:last-child:before {
-    background-color: #600;
+    background-color: red;
 }
 
 .slider18Wrapper--element:first-child:after,
@@ -816,7 +817,7 @@ body {
 
 .slider18Wrapper--element:nth-child(5):before {
     background-color: #800000;
-    background-image: url(https://images.pexels.com/photos/38012/pexels-photo-38012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-image: url('./assets//Projekt\ bez\ tytułu.jpg');
 }
 
 .hide-images .slider18Wrapper--element:nth-child(5):before {
@@ -825,7 +826,7 @@ body {
 
 .slider18Wrapper--element:first-child:before,
 .slider18Wrapper--element:last-child:before {
-    background-color: #600;
+    background-color: rgb(162, 255, 70);
 }
 
 .slider18Wrapper--element:first-child:after,
@@ -899,4 +900,138 @@ button {
 .slider18Wrapper--button:hover {
     background-color: white;
     color: black;
+}
+
+/* SLIDER Z SWITCHEM  */
+
+.slider26 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 500px;
+    background-color: #6AE73A;
+    font-family: Fahkwang;
+    color: #fff;
+    transition: .4s
+}
+
+.slider26Btn {
+    width: 100px;
+    height: 50px;
+    border: none;
+    color: #000;
+    font-family: Fahkwang;
+    background-color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: .6s;
+    text-align: center;
+    margin: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+.slider26Btn:focused {
+    outline: none;
+}
+
+.slider26Btn:hover {
+    background-color: #141111;
+    color: #fff
+}
+
+.slider26ContentBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 40vw;
+    text-align: center;
+
+}
+
+.slider26ContentBox h1 {
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: default;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.slider26ContentBox p {
+    font-weight: 300;
+    cursor: default;
+    font-size: 13;
+    margin-bottom: 40px;
+}
+
+
+
+.slider26ImageBox {
+    width: 650px;
+    height: 450px;
+    margin-top: 50px;
+    background-image: url('./assets/Rectangle\ 175.png');
+    background-position: center;
+    background-size: 700px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    transition: .4s;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: rgba(100, 100, 111, .2) 0 7px 29px 0;
+}
+
+.slider26BTN {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 40px;
+    font-family: Poppins, sans-serif;
+    margin: 0 10px;
+    transition: .4s;
+    cursor: pointer
+}
+
+.slider26BTN:hover {
+    color: #000
+}
+
+.blackC {
+    margin-top: 20px
+}
+
+.slider26 a { 
+    background-color: #fff;
+    box-shadow: var(--greyColor);
+    width: 120px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding: 20px 30px;
+    font-weight: 600;
+    color: #3A3A3A;
+    text-transform: uppercase;
+cursor: pointer;
+}
+
+@media (max-width:650px) {
+    .slider26ContentBox {
+        max-width: 90vw
+    }
+
+    .slider26 {
+        height: auto
+    }
+
+    .slider26ImageBox {
+        width: 95vw;
+        height: 100vw;
+        background-size: 95vw;
+    }
 }
