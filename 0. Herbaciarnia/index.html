@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+    /* font-family: 'Rozha One', serif;  */
+    
+
+    :root {
+        --d: 700ms;
+        --e: cubic-bezier(0.19, 1, 0.22, 1);
+        --font-sans: 'Rubik', sans-serif;
+        --font-serif: 'Cardo', serif;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .tearoomBanner {
+        width: 100vw;
+        height: 80vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+
+    .tearoomBanner--element1,
+    .tearoomBanner--element2,
+    .tearoomBanner--element3 {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .tearoomBanner--element1 {
+        background-image: url('./bg1.png');
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60%;
+        height: 50%;
+        transition: 0.4s;
+    }
+
+    .tearoomBanner--element1:hover {
+        transform: scale(1.07);
+    }
+
+    .tearoomBanner--element2:hover {
+        transform: scale(1.07);
+    }
+
+    .tearoomBanner--element3:hover {
+        transform: scale(1.07);
+    }
+
+
+
+    .tearoomBanner--element2 {
+        background-image: url('./bg2.png');
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 60%;
+        height: 50%;
+        transition: 0.4s;
+
+    }
+
+    .tearoomBanner--element3 {
+        background-image: url('./bg3.png');
+        position: absolute;
+        right: 0;
+        width: 40%;
+        height: 100%;
+        transition: 0.4s;
+
+    }
+
+    .tearoomBanner h1 {
+        color: white;
+        font-family: "Poppins";
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .tearoomBanner button {
+        letter-spacing: 1px;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: 'Poppins';
+        border: 2px solid white;
+        background: transparent;
+        padding: 10px 60px;
+        font-weight: 600;
+        font-size: 20px;
+        margin-top: 20px;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .tearoomBanner button:hover {
+        letter-spacing: 4px;
+    }
+
+    .tearoomBanner--text {
+        margin-left: 50px;
+    }
+
+    .tearoomBanner--element3 .tearoomBanner--text {
+        margin-top: 0;
+        max-width: 99vw;
+    }
+
+    .popularProductsContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        font-size: 17px;
+    }
+
+    .popularProductsContainer--stripe {
+        width: 110px;
+        height: 2px;
+        background-color: #6A725A;
+    }
+
+
+
+    .page-content {
+        display: grid;
+        grid-gap: 1rem;
+        padding: 1rem;
+        max-width: 1024px;
+        margin: 0 auto;
+        font-family: var(--font-sans);
+    }
+
+    @media (min-width: 600px) {
+        .page-content {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 800px) {
+        .page-content {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .card {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        overflow: hidden;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+        color: whitesmoke;
+        background-color: whitesmoke;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (min-width: 600px) {
+        .card {
+            height: 350px;
+        }
+    }
+
+    .card:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 110%;
+        background-size: cover;
+        background-position: 0 0;
+        transition: transform calc(var(--d) * 1.5) var(--e);
+        pointer-events: none;
+    }
+
+    .card:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200%;
+        pointer-events: none;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.320) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.540) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.790) 100%);
+        transform: translateY(-50%);
+        transition: transform calc(var(--d) * 2) var(--e);
+    }
+
+    .card:nth-child(1):before {
+        background-image: url('./1.png');
+    }
+
+    .card:nth-child(2):before {
+        background-image: url('./2.png');
+
+    }
+
+    .card:nth-child(3):before {
+        background-image: url('./3.png');
+    }
+
+    .card:nth-child(4):before {
+        background-image: url('./4.png');
+    }
+
+    .content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+        transition: transform var(--d) var(--e);
+        z-index: 1;
+    }
+
+    .content>*+* {
+        margin-top: 1rem;
+    }
+
+    .title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    .copy {
+        font-family: var(--font-serif);
+        font-size: 1.125rem;
+        font-style: italic;
+        line-height: 1.35;
+    }
+
+    .btn {
+        cursor: pointer;
+        margin-top: 1.5rem;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.65rem;
+        font-weight: bold;
+        letter-spacing: 0.025rem;
+        text-transform: uppercase;
+        color: white;
+        background-color: black;
+        border: none;
+    }
+
+    .btn:hover {
+        background-color: #0d0d0d;
+    }
+
+    .btn:focus {
+        outline: 1px dashed yellow;
+        outline-offset: 3px;
+    }
+
+    @media (max-width: 650px) {
+        .popularProductsContainer {
+            text-align: center;
+        }
+    }
+
+    @media (hover: hover) and (min-width: 600px) {
+
+
+        .card:after {
+            transform: translateY(0);
+        }
+
+        .content {
+            transform: translateY(calc(100% - 4.5rem));
+        }
+
+        .content>*:not(.title) {
+            opacity: 0;
+            transform: translateY(1rem);
+            transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+        }
+
+        .card:hover,
+        .card:focus-within {
+            align-items: center;
+        }
+
+        .card:hover:before,
+        .card:focus-within:before {
+            transform: translateY(-4%);
+        }
+
+        .card:hover:after,
+        .card:focus-within:after {
+            transform: translateY(-50%);
+        }
+
+        .card:hover .content,
+        .card:focus-within .content {
+            transform: translateY(0);
+        }
+
+        .card:hover .content>*:not(.title),
+        .card:focus-within .content>*:not(.title) {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: calc(var(--d) / 8);
+        }
+
+        .card:focus-within:before,
+        .card:focus-within:after,
+        .card:focus-within .content,
+        .card:focus-within .content>*:not(.title) {
+            transition-duration: 0s;
+        }
+    }
+
+    @media (max-width: 650px) {
+        .tearoomBanner {
+            height: 100vh;
+        }
+
+        .tearoomBanner--text {
+            margin-left: 0px;
+        }
+
+
+        .tearoomBanner--element1,
+        .tearoomBanner--element2,
+        .tearoomBanner--element3 {
+            position: relative;
+            width: 100%;
+            height: 33.33%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tearoomBanner h1 {
+            color: white;
+            font-family: "Poppins";
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 19px;
+            ;
+        }
+
+       
+
+        .tearoomBanner--text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    .carousel32 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+        height: 200px;
+        text-align: center;
+        margin-top: 55px;
+    }
+
+    .carousel32item img {
+        width: 120px;
+        border-radius: 50%;
+        padding: 5px;
+        border: 4px dotted #46702d;
+        margin: 5px;
+        transition: .7s
+    }
+
+    .carousel32item img:hover {
+        filter: sepia(50%);
+        -webkit-filter: sepia(50%);
+        -moz-filter: sepia(50%);
+        transform: rotate(18deg);
+        border-color: #6A725A;
+    }
+
+    .carousel32item h1 {
+        font-family: Poppins, sans-serif;
+        font-size: 18px;
+        color: #6A725A;
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-top: 8px;
+    }
+
+    .popularProductsContainer--text {
+        color: #434343;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 12px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 300;
+
+    }
+
+    .popularProductsContainer--margin {
+        margin-top: 70px;
+    }
+
+    .popularProductsContainer h1 {
+        color: #6A725A;
+        font-family: 'Rozha One', serif; 
+        font-weight: 400;
+        font-size: 35px;
+    text-transform: none;}
+
+
+
+    @media (min-width:650px) {
+        .tearoomBanner--element3 .tearoomBanner--text {
+        margin-top: 300px;
+    }
+    }
+    @media (max-width:650px) {
+        .carousel32 {
+            overflow-x: scroll
+        }
+
+        .carousel32::-webkit-scrollbar {
+            background: 0 0;
+            -webkit-border-radius: 1ex
+        }
+
+        .carousel32::-webkit-scrollbar-thumb {
+            background: 0 0;
+            -webkit-box-shadow: 0 0 0 transparent
+        }
+
+        .carousel32::-webkit-scrollbar-corner {
+            background: 0 0
+        }
+
+        .carousel32item img {
+            margin: 10px;
+        }
+    }
+
+    .content1 {
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 1000px;
+    }
+
+    .heading {
+        width: 100%;
+        margin-left: 1rem;
+        font-weight: 900;
+        font-size: 1.618rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1ch;
+        line-height: 1;
+        padding-bottom: 0.5em;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+    .heading:after {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(135deg, #1a9be6, #1a57e6);
+        bottom: 0;
+    }
+
+    .description {
+        width: 100%;
+        margin-top: 0;
+        margin-left: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .card1 {
+        color: inherit;
+        cursor: pointer;
+        width: calc(33% - 2rem);
+        min-width: calc(33% - 2rem);
+        height: 400px;
+        min-height: 400px;
+        perspective: 1000px;
+        margin: 1rem;
+        position: relative;
+    }
+
+    @media screen and (max-width: 800px) {
+        .card1 {
+            width: calc(50% - 2rem);
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .card1 {
+            width: 100%;
+        }
+    }
+
+    .front1,
+    .back1 {
+        display: flex;
+        border-radius: 6px;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        transition: ease-in-out 600ms;
+    }
+
+    .front1 {
+        background-size: cover;
+        padding: 2rem;
+        font-size: 1.618rem;
+        font-weight: 600;
+        color: #fff;
+        overflow: hidden;
+        font-family: 'Poppins', sans-serif;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    }
+
+    .front1:before {
+        position: absolute;
+        display: block;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, #1a9be6, #1a57e6);
+        opacity: 0.25;
+        z-index: -1;
+    }
+
+    .card1:hover .front1 {
+        transform: rotateY(180deg);
+    }
+
+    .card1:nth-child(even):hover .front1 {
+        transform: rotateY(-180deg);
+    }
+
+    .back1 {
+        background: rgb(255, 255, 255);
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transform: rotateY(-180deg);
+        padding: 0 2em;
+    }
+
+    .back1 .button1 {
+        background: linear-gradient(135deg, #1a9be6, #1a57e6);
+    }
+
+    .back1 .button1:before {
+        box-shadow: 0 0 10px 10px rgba(26, 87, 230, 0.25);
+        background-color: rgba(26, 87, 230, 0.25);
+    }
+
+    .card1:hover .back1 {
+        transform: rotateY(0deg);
+    }
+
+    .card1:nth-child(even) .back1 {
+        transform: rotateY(180deg);
+    }
+
+    .card1:nth-child(even) .back1 .button1 {
+        background: linear-gradient(135deg, #45f3ff, #3e29ff);
+    }
+
+    .card1:nth-child(even) .back1 .button1:before {
+        box-shadow: 0 0 10px 10px rgba(51, 233, 224, 0.25);
+        background-color: rgba(26, 230, 230, 0.25);
+    }
+
+    .card1:nth-child(even):hover .back1 {
+        transform: rotateY(0deg);
+    }
+
+    .button1 {
+        transform: translateZ(40px);
+        cursor: pointer;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        font-weight: bold;
+        color: #fff;
+        padding: 0.5em 1em;
+        border-radius: 50px;
+        font: inherit;
+        border: none;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: 300ms ease;
+    }
+
+    .button1:before {
+        transition: 300ms ease;
+        position: absolute;
+        display: block;
+        content: '';
+        transform: translateZ(-40px);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        height: calc(100% - 20px);
+        width: calc(100% - 20px);
+        border-radius: 100px;
+        left: 10px;
+        top: 16px;
+    }
+
+    .button1:hover {
+        transform: translateZ(55px);
+    }
+
+    .button1:hover:before {
+        transform: translateZ(-55px);
+    }
+
+    .button1:active {
+        transform: translateZ(20px);
+    }
+
+    .button1:active:before {
+        transform: translateZ(-20px);
+        top: 12px;
+    }
+
+    .content1 .card1 {
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 300;
+        color: #333;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .back1 div p {
+        margin-bottom: 30px;
+    }
+</style>
+
+<body>
+    <div class="tearoomBanner">
+        <div class="tearoomBanner--element1">
+            <div class="tearoomBanner--text">
+                <h1>Mieszanki na kazdą <br> dolegliwość</h1>
+                <button>Zobacz</button>
+            </div>
+        </div>
+        <div class="tearoomBanner--element2">
+            <div class="tearoomBanner--text">
+                <h1>Suplementy diety <br> polecane przez <br> naszych specjalistów</h1>
+                <button>Zobacz</button>
+            </div>
+        </div>
+        <div class="tearoomBanner--element3">
+            <div class="tearoomBanner--text">
+                <h1>AUtorskie MIESZANKI HERBAT <br> z naturalnych składników</h1>
+                <button>Zobacz</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="carousel32">
+        <div class="carousel32item"> <a href="#"> <img src="./kolko.png" alt="buty"> </a>
+            <h1>Mieszanki <br>herbat</h1>
+        </div>
+        <div class="carousel32item"> <a href="#"> <img src="./kolko.png" alt="buty"> </a>
+            <h1>Mieszanki <br>herbat</h1>
+        </div>
+        <div class="carousel32item"> <a href="#"> <img src="./kolko.png" alt="buty"> </a>
+            <h1>Mieszanki <br>herbat</h1>
+        </div>
+        <div class="carousel32item"> <a href="#"> <img src="./kolko.png" alt="buty"> </a>
+            <h1>Mieszanki <br>herbat</h1>
+        </div>
+        <div class="carousel32item"> <a href="#"> <img src="./kolko.png" alt="buty"> </a>
+            <h1>Mieszanki <br>herbat</h1>
+        </div>
+        <div class="carousel32item"> <a href="#"> <img src="./kolko.png" alt="buty"> </a>
+            <h1>Mieszanki <br>herbat</h1>
+        </div>
+        <div class="carousel32item"> <a href="#"> <img src="./kolko.png" alt="buty"> </a>
+            <h1>Mieszanki <br>herbat</h1>
+        </div>
+    </div>
+
+    <div class="popularProductsContainer popularProductsContainer--margin">
+        <p class="popularProductsContainer--text">Poznaj nasze produkty</p>
+        <h1>Autorskie mieszanki herbat</h1>
+       
+    </div>
+
+    <div class="content1">
+      
+        <a class="card1" href="#!">
+            <div class="front1" style="background-image:
+             url(https://images.pexels.com/photos/1122626/pexels-photo-1122626.jpeg?auto=compress&cs=tinysrgbdpr=3h=750&w=1260)">
+                <p>Lorem ipsum dolor </p>
+            </div>
+            <div class="back1">
+                <div>
+                    <p>Consectetur adipisicing elit.</p>
+                    <p>Provident consectetur!</p><button1
+                        class="button1">Sprawdź</button1>
+                </div>
+            </div>
+        </a>
+
+
+        <a class="card1" href="#!">
+            <div class="front1" style="background-image:
+             url(https://images.pexels.com/photos/1122626/pexels-photo-1122626.jpeg?auto=compress&cs=tinysrgbdpr=3h=750&w=1260)">
+                <p>Lorem ipsum dolor </p>
+            </div>
+            <div class="back1">
+                <div>
+                    <p>Consectetur adipisicing elit.</p>
+                    <p>Provident consectetur!</p><button1
+                        class="button1">Sprawdź</button1>
+                </div>
+            </div>
+        </a>
+
+
+        <a class="card1" href="#!">
+            <div class="front1" style="background-image:
+             url(https://images.pexels.com/photos/1122626/pexels-photo-1122626.jpeg?auto=compress&cs=tinysrgbdpr=3h=750&w=1260)">
+                <p>Lorem ipsum dolor </p>
+            </div>
+            <div class="back1">
+                <div>
+                    <p>Consectetur adipisicing elit.</p>
+                    <p>Provident consectetur!</p><button1
+                        class="button1">Sprawdź</button1>
+                </div>
+            </div>
+        </a>
+
+    </div>
+</body>
+
+</html>

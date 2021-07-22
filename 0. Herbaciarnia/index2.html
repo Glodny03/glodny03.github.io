@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .tearoomBanner {
+        width: 100vw;
+        height: 80vh;
+        position: relative;
+
+    }
+
+
+    .tearoomBanner--element1,
+    .tearoomBanner--element2,
+    .tearoomBanner--element3 {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .tearoomBanner--element1 {
+        background-image: url('./bg1.png');
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60%;
+        height: 50%;
+    }
+
+    .tearoomBanner--element2 {
+        background-image: url('./bg2.png');
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 60%;
+        height: 50%;
+    }
+
+    .tearoomBanner--element3 {
+        background-image: url('./bg3.png');
+        position: absolute;
+        right: 0;
+        width: 40%;
+        height: 100%;
+    }
+
+    @media (max-width: 650px) {}
+
+    @media (max-width: 650px) {
+        .tearoomBanner {
+            height: 100vh;
+        }
+
+        .tearoomBanner--element1,
+        .tearoomBanner--element2,
+        .tearoomBanner--element3 {
+            position: relative;
+            width: 100%;
+            height: 33.33%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    /* BANNER EPROM  */
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+    :root {
+        --color-primary: #56677e;
+        --color-secondary: #101118;
+        --base-duration: 500ms;
+        --base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
+    }
+
+    .slide2 {
+        --x: 0;
+        --y: 0;
+        --d: 50;
+    }
+
+    .slide2:hover .slide2__image-wrapper {
+        transform: scale(1.025) translate(calc(var(--x) / var(--d) * 1px), calc(var(--y) / var(--d) * 1px));
+    }
+
+    .slide2__image {
+        --d: 20;
+        transform: translate(calc(var(--x) / var(--d) * 1px), calc(var(--y) / var(--d) * 1px));
+    }
+
+    .slide2__content {
+        --d: 60;
+        transform: translate(calc(var(--x) / var(--d) * -1px), calc(va r(--y) / var(--d) * -1px));
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .btn-slide2 {
+        background-color: var(--color-primary);
+        border: none;
+        border-radius: 0.125rem;
+        color: white;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: inherit;
+        padding: 1em 2em 1.125em;
+        position: relative;
+        z-index: 1;
+        transition: 0.5s;
+    }
+
+    .btn-slide2:hover {
+        letter-spacing: 2px;
+    }
+
+    .btn-slide2:active {
+        transform: translateY(1px);
+    }
+
+    .slide2 {
+        align-items: center;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+        width: 75vmin;
+        z-index: 1;
+    }
+
+    .slide2:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+    }
+
+    .slide2__image-wrapper {
+        border-radius: 1%;
+        height: 100%;
+        left: 0%;
+        overflow: hidden;
+        position: absolute;
+        top: 0%;
+        transition: transform calc(var(--base-duration) / 4) var(--base-ease);
+        width: 100%;
+    }
+
+    .slide2__image {
+        --d: 20;
+        height: 110%;
+        left: -5%;
+        object-fit: cover;
+        pointer-events: none;
+        position: absolute;
+        top: -5%;
+        transition: transform var(--base-duration) var(--base-ease);
+        user-select: none;
+        width: 110%;
+    }
+
+    .slide2__headline {
+        font-size: 8vmin;
+        font-weight: 600;
+        position: relative;
+    }
+
+    .slide2__content {
+        --d: 60;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        left: 0;
+        padding: 4vmin;
+        position: absolute;
+        top: 0;
+        transition: transform var(--base-duration) var(--base-ease);
+        width: 100%;
+        z-index: 1;
+    }
+
+    .slide2__content>*+* {
+        margin-top: 2rem;
+    }
+
+    .display-coordinates2 .coordinates2-overlay,
+    .display-coordinates2 .slide2:hover .coordinates2-tooltip2 {
+        display: block;
+    }
+
+    .coordinates2-checkbox {
+        align-items: center;
+        color: white;
+        display: flex;
+        position: fixed;
+        top: 1rem;
+    }
+
+    .coordinates2-checkbox label {
+        font-size: 0.9rem;
+        margin-left: 0.25rem;
+    }
+
+    .coordinates2-tooltip2 {
+        color: red;
+        display: none;
+        pointer-events: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 100;
+    }
+
+    .coordinates2-tooltip2::after {
+        counter-reset: x var(--x) y var(--y);
+        content: 'x: 'counter(x) ', y: 'counter(y);
+    }
+
+    .coordinates2-overlay {
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .coordinates2-overlay:before,
+    .coordinates2-overlay:after {
+        background: rgba(255, 255, 255, 0.5);
+        content: '';
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+    }
+
+    .coordinates2-overlay:before {
+        transform: translate(-50%, -50%);
+    }
+
+    .coordinates2-overlay:after {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    .banner3dContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+</style>
+
+<body>
+    <!-- <div class="tearoomBanner">
+        <div class="tearoomBanner--element1"></div>
+        <div class="tearoomBanner--element2"></div>
+        <div class="tearoomBanner--element3"></div>
+    </div> -->
+
+    <div class="motionCard1">
+        <div id="example2" class="slide2">
+            <div class="slide2__image-wrapper">
+                <img class="slide2__image" src="./bg3.png" alt="Woods landscape">
+            </div>
+            <div class="slide2__content">
+                <h2 class="slide2__headline">Lorem ipsum dolor</h2>
+                <button class="slide2__action btn-slide2">Sprawdź</button>
+            </div>
+            <div class="coordinates2-overlay"></div>
+            <div id="coordinates2" class="coordinates2-tooltip2"></div>
+        </div>
+    </div>
+
+    <script>
+        const slide2 = document.getElementById('example2');
+        const tooltip2 = document.getElementById('coordinates2');
+        const toggle2 = document.getElementById('display-coordinates2');
+
+        slide2.addEventListener('mousemove', function (e) {
+            // Get dimensions of slide2 element
+            const r2 = this.getBoundingClientRect()
+
+            // Set x and y values prop values based on center of slide2 element
+            this.style.setProperty('--x', e.clientX - (r2.left + Math.floor(r2.width / 2)))
+            this.style.setProperty('--y', e.clientY - (r2.top + Math.floor(r2.height / 2)))
+        })
+
+        slide2.addEventListener('mouseleave', function () {
+            // Reset x and y prop values when no longer hovering
+            this.style.setProperty('--x', 0)
+            this.style.setProperty('--y', 0)
+        })
+
+
+        document.body.addEventListener('mousemove', function (e) {
+            // Have coordinate values follow the user's cursor
+            tooltip2.style.left = e.pageX - 15 + 'px';
+            tooltip2.style.top = e.pageY - 70 + 'px';
+        })
+
+        toggle2.addEventListener('change', function (e) {
+            // toggle2 the display of coordinate values
+            this.checked ?
+                document.body.classList.add('display-coordinates2') :
+                document.body.classList.remove('display-coordinates2')
+        })
+    </script>
+</body>
+
+</html>
