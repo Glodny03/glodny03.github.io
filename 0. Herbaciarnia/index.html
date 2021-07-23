@@ -8,36 +8,40 @@
     <title>Document</title>
 </head>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
-    /* font-family: 'Rozha One', serif;  */
-    
+    @import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100&display=swap);
+    @import url(https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap);
+    @import url(https://fonts.googleapis.com/css2?family=Rozha+One&display=swap);
 
     :root {
         --d: 700ms;
         --e: cubic-bezier(0.19, 1, 0.22, 1);
         --font-sans: 'Rubik', sans-serif;
-        --font-serif: 'Cardo', serif;
+        --font-serif: 'Cardo', serif
     }
+
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        cursor: default
+    }
+
+    a,
+    button,
+    img {
+        cursor: pointer
     }
 
     body {
-        overflow-x: hidden;
+        overflow-x: hidden
     }
 
     .tearoomBanner {
         width: 100vw;
         height: 80vh;
         position: relative;
-        overflow: hidden;
-
+        overflow: hidden
     }
-
 
     .tearoomBanner--element1,
     .tearoomBanner--element2,
@@ -47,86 +51,81 @@
         background-position: center;
         display: flex;
         align-items: center;
+        cursor: pointer;
+        transition: .8s
     }
 
     .tearoomBanner--element1 {
-        background-image: url('./bg1.png');
+        background-image: url(bg1.png);
         position: absolute;
         left: 0;
         top: 0;
         width: 60%;
         height: 50%;
-        transition: 0.4s;
     }
 
     .tearoomBanner--element1:hover {
-        transform: scale(1.07);
+        transform: scale(1.05) rotate(1deg)
     }
 
     .tearoomBanner--element2:hover {
-        transform: scale(1.07);
+        transform: scale(1.05) rotate(1deg)
     }
 
     .tearoomBanner--element3:hover {
-        transform: scale(1.07);
+        transform: scale(1.05) rotate(-1deg)
     }
 
-
-
     .tearoomBanner--element2 {
-        background-image: url('./bg2.png');
+        background-image: url(bg2.png);
         position: absolute;
         left: 0;
         bottom: 0;
         width: 60%;
         height: 50%;
-        transition: 0.4s;
-
     }
 
     .tearoomBanner--element3 {
-        background-image: url('./bg3.png');
+        background-image: url(bg3.png);
         position: absolute;
         right: 0;
         width: 40%;
         height: 100%;
-        transition: 0.4s;
-
     }
 
     .tearoomBanner h1 {
-        color: white;
-        font-family: "Poppins";
+        color: #fff;
+        font-family: Poppins;
         font-weight: 700;
-        text-transform: uppercase;
+        text-transform: uppercase
     }
 
     .tearoomBanner button {
         letter-spacing: 1px;
         color: #fff;
         text-transform: uppercase;
-        font-family: 'Poppins';
-        border: 2px solid white;
-        background: transparent;
+        font-family: Poppins;
+        border: 2px solid #fff;
+        background: 0 0;
         padding: 10px 60px;
         font-weight: 600;
         font-size: 20px;
         margin-top: 20px;
-        transition: 0.5s;
-        cursor: pointer;
+        transition: .5s;
+        cursor: pointer
     }
 
     .tearoomBanner button:hover {
-        letter-spacing: 4px;
+        letter-spacing: 4px
     }
 
     .tearoomBanner--text {
-        margin-left: 50px;
+        margin-left: 50px
     }
 
     .tearoomBanner--element3 .tearoomBanner--text {
         margin-top: 0;
-        max-width: 99vw;
+        max-width: 99vw
     }
 
     .popularProductsContainer {
@@ -134,18 +133,16 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        font-family: 'Poppins', sans-serif;
+        font-family: Poppins, sans-serif;
         text-transform: uppercase;
-        font-size: 17px;
+        font-size: 17px
     }
 
     .popularProductsContainer--stripe {
         width: 110px;
         height: 2px;
-        background-color: #6A725A;
+        background-color: #6a725a
     }
-
-
 
     .page-content {
         display: grid;
@@ -153,18 +150,18 @@
         padding: 1rem;
         max-width: 1024px;
         margin: 0 auto;
-        font-family: var(--font-sans);
+        font-family: var(--font-sans)
     }
 
-    @media (min-width: 600px) {
+    @media (min-width:600px) {
         .page-content {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr)
         }
     }
 
-    @media (min-width: 800px) {
+    @media (min-width:800px) {
         .page-content {
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(4, 1fr)
         }
     }
 
@@ -176,14 +173,14 @@
         padding: 1rem;
         width: 100%;
         text-align: center;
-        color: whitesmoke;
-        background-color: whitesmoke;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+        color: #f5f5f5;
+        background-color: #f5f5f5;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, .1), 0 2px 2px rgba(0, 0, 0, .1), 0 4px 4px rgba(0, 0, 0, .1), 0 8px 8px rgba(0, 0, 0, .1), 0 16px 16px rgba(0, 0, 0, .1)
     }
 
-    @media (min-width: 600px) {
+    @media (min-width:600px) {
         .card {
-            height: 350px;
+            height: 350px
         }
     }
 
@@ -197,7 +194,7 @@
         background-size: cover;
         background-position: 0 0;
         transition: transform calc(var(--d) * 1.5) var(--e);
-        pointer-events: none;
+        pointer-events: none
     }
 
     .card:after {
@@ -209,26 +206,25 @@
         width: 100%;
         height: 200%;
         pointer-events: none;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.320) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.540) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.790) 100%);
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .009) 11.7%, rgba(0, 0, 0, .034) 22.1%, rgba(0, 0, 0, .072) 31.2%, rgba(0, 0, 0, .123) 39.4%, rgba(0, 0, 0, .182) 46.6%, rgba(0, 0, 0, .249) 53.1%, rgba(0, 0, 0, .32) 58.9%, rgba(0, 0, 0, .394) 64.3%, rgba(0, 0, 0, .468) 69.3%, rgba(0, 0, 0, .54) 74.1%, rgba(0, 0, 0, .607) 78.8%, rgba(0, 0, 0, .668) 83.6%, rgba(0, 0, 0, .721) 88.7%, rgba(0, 0, 0, .762) 94.1%, rgba(0, 0, 0, .79) 100%);
         transform: translateY(-50%);
-        transition: transform calc(var(--d) * 2) var(--e);
+        transition: transform calc(var(--d) * 2) var(--e)
     }
 
     .card:nth-child(1):before {
-        background-image: url('./1.png');
+        background-image: url(1.png)
     }
 
     .card:nth-child(2):before {
-        background-image: url('./2.png');
-
+        background-image: url(2.png)
     }
 
     .card:nth-child(3):before {
-        background-image: url('./3.png');
+        background-image: url(3.png)
     }
 
     .card:nth-child(4):before {
-        background-image: url('./4.png');
+        background-image: url(4.png)
     }
 
     .content {
@@ -239,115 +235,112 @@
         width: 100%;
         padding: 1rem;
         transition: transform var(--d) var(--e);
-        z-index: 1;
+        z-index: 1
     }
 
     .content>*+* {
-        margin-top: 1rem;
+        margin-top: 1rem
     }
 
     .title {
         font-size: 1.3rem;
-        font-weight: bold;
-        line-height: 1.2;
+        font-weight: 700;
+        line-height: 1.2
     }
 
     .copy {
         font-family: var(--font-serif);
         font-size: 1.125rem;
         font-style: italic;
-        line-height: 1.35;
+        line-height: 1.35
     }
 
     .btn {
         cursor: pointer;
         margin-top: 1.5rem;
-        padding: 0.75rem 1.5rem;
-        font-size: 0.65rem;
-        font-weight: bold;
-        letter-spacing: 0.025rem;
+        padding: .75rem 1.5rem;
+        font-size: .65rem;
+        font-weight: 700;
+        letter-spacing: .025rem;
         text-transform: uppercase;
-        color: white;
-        background-color: black;
-        border: none;
+        color: #fff;
+        background-color: #000;
+        border: none
     }
 
     .btn:hover {
-        background-color: #0d0d0d;
+        background-color: #0d0d0d
     }
 
     .btn:focus {
-        outline: 1px dashed yellow;
-        outline-offset: 3px;
+        outline: 1px dashed #ff0;
+        outline-offset: 3px
     }
 
-    @media (max-width: 650px) {
+    @media (max-width:650px) {
         .popularProductsContainer {
-            text-align: center;
+            text-align: center
         }
     }
 
-    @media (hover: hover) and (min-width: 600px) {
-
-
+    @media (hover:hover) and (min-width:600px) {
         .card:after {
-            transform: translateY(0);
+            transform: translateY(0)
         }
 
         .content {
-            transform: translateY(calc(100% - 4.5rem));
+            transform: translateY(calc(100% - 4.5rem))
         }
 
-        .content>*:not(.title) {
+        .content>:not(.title) {
             opacity: 0;
             transform: translateY(1rem);
-            transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+            transition: transform var(--d) var(--e), opacity var(--d) var(--e)
         }
 
-        .card:hover,
-        .card:focus-within {
-            align-items: center;
-        }
-
-        .card:hover:before,
-        .card:focus-within:before {
-            transform: translateY(-4%);
-        }
-
-        .card:hover:after,
-        .card:focus-within:after {
-            transform: translateY(-50%);
-        }
-
-        .card:hover .content,
-        .card:focus-within .content {
-            transform: translateY(0);
-        }
-
-        .card:hover .content>*:not(.title),
-        .card:focus-within .content>*:not(.title) {
-            opacity: 1;
-            transform: translateY(0);
-            transition-delay: calc(var(--d) / 8);
+        .card:focus-within,
+        .card:hover {
+            align-items: center
         }
 
         .card:focus-within:before,
+        .card:hover:before {
+            transform: translateY(-4%)
+        }
+
         .card:focus-within:after,
+        .card:hover:after {
+            transform: translateY(-50%)
+        }
+
         .card:focus-within .content,
-        .card:focus-within .content>*:not(.title) {
-            transition-duration: 0s;
+        .card:hover .content {
+            transform: translateY(0)
+        }
+
+        .card:focus-within .content>:not(.title),
+        .card:hover .content>:not(.title) {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: calc(var(--d)/ 8)
+        }
+
+        .card:focus-within .content,
+        .card:focus-within .content>:not(.title),
+        .card:focus-within:after,
+        .card:focus-within:before {
+            transition-duration: 0s
         }
     }
 
-    @media (max-width: 650px) {
+    @media (max-width:650px) {
         .tearoomBanner {
-            height: 100vh;
+            height: 100vh
         }
 
         .tearoomBanner--text {
-            margin-left: 0px;
+            margin-left: 0
         }
-
 
         .tearoomBanner--element1,
         .tearoomBanner--element2,
@@ -357,26 +350,23 @@
             height: 33.33%;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: center
         }
 
         .tearoomBanner h1 {
-            color: white;
-            font-family: "Poppins";
+            color: #fff;
+            font-family: Poppins;
             font-weight: 700;
             text-transform: uppercase;
             text-align: center;
-            font-size: 19px;
-            ;
+            font-size: 19px
         }
-
-       
 
         .tearoomBanner--text {
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+            flex-direction: column
         }
     }
 
@@ -387,7 +377,7 @@
         width: 100vw;
         height: 200px;
         text-align: center;
-        margin-top: 55px;
+        margin-top: 55px
     }
 
     .carousel32item img {
@@ -396,7 +386,8 @@
         padding: 5px;
         border: 4px dotted #46702d;
         margin: 5px;
-        transition: .7s
+        transition: .7s;
+        animation: changeColorAndBGc 100s ease 1s infinite alternate none
     }
 
     .carousel32item img:hover {
@@ -404,47 +395,74 @@
         -webkit-filter: sepia(50%);
         -moz-filter: sepia(50%);
         transform: rotate(18deg);
-        border-color: #6A725A;
+        border-color: #6a725a
+    }
+
+    @keyframes changeColorAndBGc {
+        0% {
+            color: #434343;
+            border-color: #434343
+        }
+
+        25% {
+            color: #46702d;
+            border-color: #46702d
+        }
+
+        50% {
+            color: #3d3939;
+            border-color: #3d3939
+        }
+
+        75% {
+            color: #3a6422;
+            border-color: #3a6422
+        }
+
+        100% {
+            color: #548836;
+            border-color: #548836
+        }
     }
 
     .carousel32item h1 {
         font-family: Poppins, sans-serif;
         font-size: 18px;
-        color: #6A725A;
+        color: #6a725a;
         font-weight: 400;
         letter-spacing: 2px;
         text-transform: uppercase;
         margin-top: 8px;
+        animation: changeColorAndBGc 100s ease 1s infinite alternate none
     }
 
     .popularProductsContainer--text {
         color: #434343;
-        font-family: 'Poppins', sans-serif;
+        font-family: Poppins, sans-serif;
         margin-top: 12px;
         text-transform: uppercase;
         font-size: 16px;
-        font-weight: 300;
-
+        font-weight: 300
     }
 
     .popularProductsContainer--margin {
-        margin-top: 70px;
+        margin-top: 70px
     }
 
     .popularProductsContainer h1 {
-        color: #6A725A;
-        font-family: 'Rozha One', serif; 
+        color: #6a725a;
+        font-family: 'Rozha One', serif;
         font-weight: 400;
         font-size: 35px;
-    text-transform: none;}
-
-
+        text-transform: none
+    }
 
     @media (min-width:650px) {
         .tearoomBanner--element3 .tearoomBanner--text {
-        margin-top: 300px;
+            margin-top: 300px
+        }
     }
-    }
+
     @media (max-width:650px) {
         .carousel32 {
             overflow-x: scroll
@@ -465,7 +483,7 @@
         }
 
         .carousel32item img {
-            margin: 10px;
+            margin: 10px
         }
     }
 
@@ -475,7 +493,7 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        max-width: 1000px;
+        max-width: 100vw
     }
 
     .heading {
@@ -484,11 +502,11 @@
         font-weight: 900;
         font-size: 1.618rem;
         text-transform: uppercase;
-        letter-spacing: 0.1ch;
+        letter-spacing: .1ch;
         line-height: 1;
-        padding-bottom: 0.5em;
+        padding-bottom: .5em;
         margin-bottom: 1rem;
-        position: relative;
+        position: relative
     }
 
     .heading:after {
@@ -498,42 +516,42 @@
         width: 60px;
         height: 4px;
         background: linear-gradient(135deg, #1a9be6, #1a57e6);
-        bottom: 0;
+        bottom: 0
     }
 
     .description {
         width: 100%;
         margin-top: 0;
         margin-left: 1rem;
-        margin-bottom: 3rem;
+        margin-bottom: 3rem
     }
 
     .card1 {
         color: inherit;
         cursor: pointer;
-        width: calc(33% - 2rem);
-        min-width: calc(33% - 2rem);
-        height: 400px;
-        min-height: 400px;
+        width: 250px;
+        min-width: 250px;
+        height: 300px;
+        min-height: 300px;
         perspective: 1000px;
-        margin: 1rem;
-        position: relative;
+        margin: 1rem 20px;
+        position: relative
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width:800px) {
         .card1 {
-            width: calc(50% - 2rem);
+            width: calc(50% - 2rem)
         }
     }
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width:500px) {
         .card1 {
-            width: 100%;
+            width: 100%
         }
     }
 
-    .front1,
-    .back1 {
+    .back1,
+    .front1 {
         display: flex;
         border-radius: 6px;
         background-position: center;
@@ -547,7 +565,7 @@
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         transform-style: preserve-3d;
-        transition: ease-in-out 600ms;
+        transition: ease-in-out .6s
     }
 
     .front1 {
@@ -557,9 +575,8 @@
         font-weight: 600;
         color: #fff;
         overflow: hidden;
-        font-family: 'Poppins', sans-serif;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
+        font-family: Poppins, sans-serif;
+        box-shadow: rgba(100, 100, 111, .2) 0 7px 29px 0
     }
 
     .front1:before {
@@ -570,54 +587,53 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(135deg, #1a9be6, #1a57e6);
-        opacity: 0.25;
-        z-index: -1;
+        opacity: .25;
+        z-index: -1
     }
 
     .card1:hover .front1 {
-        transform: rotateY(180deg);
+        transform: rotateY(180deg)
     }
 
     .card1:nth-child(even):hover .front1 {
-        transform: rotateY(-180deg);
+        transform: rotateY(-180deg)
     }
 
     .back1 {
-        background: rgb(255, 255, 255);
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        background: #fff;
+        box-shadow: rgba(100, 100, 111, .2) 0 7px 29px 0;
         transform: rotateY(-180deg);
-        padding: 0 2em;
+        padding: 0 2em
     }
 
     .back1 .button1 {
-        background: linear-gradient(135deg, #1a9be6, #1a57e6);
+        background: linear-gradient(135deg, #c4e779, #6b8142)
     }
 
     .back1 .button1:before {
-        box-shadow: 0 0 10px 10px rgba(26, 87, 230, 0.25);
-        background-color: rgba(26, 87, 230, 0.25);
+        box-shadow: 0 0 10px 10px rgba(26, 87, 230, .25);
+        background-color: rgba(26, 87, 230, .25)
     }
 
     .card1:hover .back1 {
-        transform: rotateY(0deg);
+        transform: rotateY(0)
     }
 
     .card1:nth-child(even) .back1 {
-        transform: rotateY(180deg);
+        transform: rotateY(180deg)
     }
 
     .card1:nth-child(even) .back1 .button1 {
-        background: linear-gradient(135deg, #45f3ff, #3e29ff);
+        background: linear-gradient(135deg, #6b8142, #c4e779)
     }
 
     .card1:nth-child(even) .back1 .button1:before {
-        box-shadow: 0 0 10px 10px rgba(51, 233, 224, 0.25);
-        background-color: rgba(26, 230, 230, 0.25);
+        box-shadow: 0 0 10px 10px rgba(51, 233, 224, .25);
+        background-color: rgba(26, 230, 230, .25)
     }
 
     .card1:nth-child(even):hover .back1 {
-        transform: rotateY(0deg);
+        transform: rotateY(0)
     }
 
     .button1 {
@@ -625,19 +641,19 @@
         cursor: pointer;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-        font-weight: bold;
+        font-weight: 700;
         color: #fff;
-        padding: 0.5em 1em;
+        padding: .5em 1em;
         border-radius: 50px;
         font: inherit;
         border: none;
         position: relative;
         transform-style: preserve-3d;
-        transition: 300ms ease;
+        transition: .3s ease
     }
 
     .button1:before {
-        transition: 300ms ease;
+        transition: .3s ease;
         position: absolute;
         display: block;
         content: '';
@@ -648,24 +664,24 @@
         width: calc(100% - 20px);
         border-radius: 100px;
         left: 10px;
-        top: 16px;
+        top: 16px
     }
 
     .button1:hover {
-        transform: translateZ(55px);
+        transform: translateZ(55px)
     }
 
     .button1:hover:before {
-        transform: translateZ(-55px);
+        transform: translateZ(-55px)
     }
 
     .button1:active {
-        transform: translateZ(20px);
+        transform: translateZ(20px)
     }
 
     .button1:active:before {
         transform: translateZ(-20px);
-        top: 12px;
+        top: 12px
     }
 
     .content1 .card1 {
@@ -673,11 +689,282 @@
         line-height: 1.5;
         font-weight: 300;
         color: #333;
-        font-family: "Poppins", sans-serif;
+        font-family: Poppins, sans-serif
     }
 
     .back1 div p {
+        margin-bottom: 30px
+    }
+
+    .productCardContainer__text {
+        color: #424242;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .productCardContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .productCardContainer__text h1 {
+        font-size: 13.5px;
+        font-weight: 600;
+    }
+
+    .productCardContainer__text p {
+        font-size: 17px;
+        font-weight: 400;
+    }
+
+    .allCardsContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
         margin-bottom: 30px;
+
+    }
+
+    .allCardsContainer__button {
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding: 8px 50px;
+        margin: 20px;
+        background-color: #6A725B;
+        font-size: 20px;
+        border-radius: 10px;
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-decoration: none;
+        transition: 0.4s;
+    }
+
+    .allCardsContainer__button:hover {
+        background-color: #4c533e;
+        letter-spacing: 4px;
+    }
+
+    /* SLIDER */
+
+    .slider26 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+        height: 500px;
+        background-color: #CFD3A9;
+        font-family: Poppins;
+        color: #fff;
+        transition: .4s
+    }
+
+    .slider26Btn {
+        width: 100px;
+        height: 50px;
+        border: none;
+        color: #000;
+        font-family: Poppins;
+        background-color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        transition: .6s;
+        text-align: center;
+        margin: 15px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .slider26Btn:focused {
+        outline: none;
+    }
+
+    .slider26Btn:hover {
+        background-color: #141111;
+        color: #fff
+    }
+
+    .slider26ContentBox {
+        display: flex;
+        flex-direction: column;
+        max-width: 40vw;
+        text-align: left
+    }
+
+    .slider26ContentBox h1 {
+        font-weight: 500;
+        letter-spacing: 2px;
+        font-family: Rozha One;
+        color: #434343;
+        font-size: 40px;
+    }
+
+    .slider26ContentBox p:nth-child(1) {
+        font-weight: 300;
+        cursor: default;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        color: #434343;
+        font-size: 17px;
+        letter-spacing: 2px;
+    }
+
+    .desc26 {
+        font-weight: 300;
+        color: #434343;
+    }
+
+    .slider26ContentBoxStripe {
+        background-color: #434343;
+        width: 90px;
+        height: 1px;
+        margin: 15px 0 25px 0;
+    }
+
+
+    .slider26ImageBox {
+        width: 650px;
+        height: 450px;
+        margin-top: 50px;
+        background-image: url('./image5.png');
+        background-position: center;
+        background-size: 700px;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-between;
+        transition: .4s;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        box-shadow: rgba(100, 100, 111, .2) 0 7px 29px 0;
+    }
+
+    .slider26BTN {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 40px;
+        font-family: Poppins, sans-serif;
+        margin: 0 10px;
+        transition: .4s;
+        cursor: pointer
+    }
+
+    .slider26BTN:hover {
+        color: #000
+    }
+
+    .blackC {
+        margin-top: 20px
+    }
+
+    @media (max-width:650px) {
+        .slider26ContentBox {
+            max-width: 90vw
+        }
+
+        .slider26 {
+            height: auto
+        }
+
+        .slider26ImageBox {
+            width: 95vw;
+            height: 100vw;
+            background-size: 95vw;
+        }
+    }
+
+    .blogItemsContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .blogItemLongText {
+        text-transform: none;
+        color: #fff;
+        font-weight: 300;
+        max-width: 85%;
+        cursor: pointer;
+        /* TO HOVER  */
+        opacity: 0;
+
+        transition: 0.4s;
+    }
+
+    .blogItem {
+        position: relative;
+        width: 430px;
+        height: 280px;
+        border-radius: 10px;
+        /* background-image: url('./Frame.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; */
+        margin: 15px;
+        overflow: hidden;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+
+    .blogItem img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: 0.4s;
+      border-radius: 10px;
+
+    }
+
+    .blogItem img:hover,
+    .blogItem:hover img {
+     
+        filter: brightness(60%);
+      border-radius: 10px;
+    }
+
+
+
+    .blogItem__content {
+        z-index: 4;
+        position: relative;
+        margin-left: 25px;
+        /* TO HOVER  */
+        transform: translateY(75%);
+        transition: 0.4s;
+        cursor: pointer;
+    }
+
+    .blogItem:hover .blogItem__content {
+        transform: translateY(25%);
+    }
+
+    .blogItem:hover .blogItemLongText {
+        opacity: 1;
+    }
+
+
+    .blogItem__content h1 {
+        color: #fff;
+        font-size: 30px;
+        cursor: pointer;
+        letter-spacing: 1px;
+    }
+
+    .blogItem__whiteStripe {
+        width: 100px;
+        height: 2px;
+        background-color: #fff;
+        margin: 6px 0;
     }
 </style>
 
@@ -685,24 +972,20 @@
     <div class="tearoomBanner">
         <div class="tearoomBanner--element1">
             <div class="tearoomBanner--text">
-                <h1>Mieszanki na kazdą <br> dolegliwość</h1>
-                <button>Zobacz</button>
+                <h1>Mieszanki na kazdą <br>dolegliwość</h1> <button>Zobacz</button>
             </div>
         </div>
         <div class="tearoomBanner--element2">
             <div class="tearoomBanner--text">
-                <h1>Suplementy diety <br> polecane przez <br> naszych specjalistów</h1>
-                <button>Zobacz</button>
+                <h1>Suplementy diety <br>polecane przez <br>naszych specjalistów</h1> <button>Zobacz</button>
             </div>
         </div>
         <div class="tearoomBanner--element3">
             <div class="tearoomBanner--text">
-                <h1>AUtorskie MIESZANKI HERBAT <br> z naturalnych składników</h1>
-                <button>Zobacz</button>
+                <h1>AUtorskie MIESZANKI HERBAT <br>z naturalnych składników</h1> <button>Zobacz</button>
             </div>
         </div>
     </div>
-
     <div class="carousel32">
         <div class="carousel32item"> <a href="#"> <img src="./kolko.png" alt="buty"> </a>
             <h1>Mieszanki <br>herbat</h1>
@@ -726,60 +1009,252 @@
             <h1>Mieszanki <br>herbat</h1>
         </div>
     </div>
-
     <div class="popularProductsContainer popularProductsContainer--margin">
         <p class="popularProductsContainer--text">Poznaj nasze produkty</p>
+
         <h1>Autorskie mieszanki herbat</h1>
-       
-    </div>
-
-    <div class="content1">
-      
-        <a class="card1" href="#!">
-            <div class="front1" style="background-image:
-             url(https://images.pexels.com/photos/1122626/pexels-photo-1122626.jpeg?auto=compress&cs=tinysrgbdpr=3h=750&w=1260)">
-                <p>Lorem ipsum dolor </p>
-            </div>
-            <div class="back1">
-                <div>
-                    <p>Consectetur adipisicing elit.</p>
-                    <p>Provident consectetur!</p><button1
-                        class="button1">Sprawdź</button1>
-                </div>
-            </div>
-        </a>
-
-
-        <a class="card1" href="#!">
-            <div class="front1" style="background-image:
-             url(https://images.pexels.com/photos/1122626/pexels-photo-1122626.jpeg?auto=compress&cs=tinysrgbdpr=3h=750&w=1260)">
-                <p>Lorem ipsum dolor </p>
-            </div>
-            <div class="back1">
-                <div>
-                    <p>Consectetur adipisicing elit.</p>
-                    <p>Provident consectetur!</p><button1
-                        class="button1">Sprawdź</button1>
-                </div>
-            </div>
-        </a>
-
-
-        <a class="card1" href="#!">
-            <div class="front1" style="background-image:
-             url(https://images.pexels.com/photos/1122626/pexels-photo-1122626.jpeg?auto=compress&cs=tinysrgbdpr=3h=750&w=1260)">
-                <p>Lorem ipsum dolor </p>
-            </div>
-            <div class="back1">
-                <div>
-                    <p>Consectetur adipisicing elit.</p>
-                    <p>Provident consectetur!</p><button1
-                        class="button1">Sprawdź</button1>
-                </div>
-            </div>
-        </a>
+        <div class="slider26ContentBoxStripe" style="margin: 10px 0 5px 0; height: 1.3px;"></div>
 
     </div>
+
+
+    <div class="allCardsContainer">
+        <div class="content1">
+            <div class="productCardContainer"> <a class="card1" href="#!">
+                    <div class="front1" style="background-image: url(./productImage.png)"> </div>
+                    <div class="back1">
+                        <div>
+                            <p>Lawenda <br>Melisa <br>Koper włoski <br>Dziewanna </p>
+                            <button1 class="button1">Kup teraz</button1>
+                        </div>
+                    </div>
+                </a>
+                <div class="productCardContainer__text">
+                    <h1>Herbata</h1>
+                    <p>Lawendowa łąka</p>
+                    <h1>30G</h1>
+                </div>
+            </div>
+            <div class="productCardContainer"> <a class="card1" href="#!">
+                    <div class="front1" style="background-image: url(./productImage.png)"> </div>
+                    <div class="back1">
+                        <div>
+                            <p>Lawenda <br>Melisa <br>Koper włoski <br>Dziewanna </p>
+                            <button1 class="button1">Kup teraz</button1>
+                        </div>
+                    </div>
+                </a>
+                <div class="productCardContainer__text">
+                    <h1>Herbata</h1>
+                    <p>Lawendowa łąka</p>
+                    <h1>30G</h1>
+                </div>
+            </div>
+            <div class="productCardContainer"> <a class="card1" href="#!">
+                    <div class="front1" style="background-image: url(./productImage.png)"> </div>
+                    <div class="back1">
+                        <div>
+                            <p>Lawenda <br>Melisa <br>Koper włoski <br>Dziewanna </p>
+                            <button1 class="button1">Kup teraz</button1>
+                        </div>
+                    </div>
+                </a>
+                <div class="productCardContainer__text">
+                    <h1>Herbata</h1>
+                    <p>Lawendowa łąka</p>
+                    <h1>30G</h1>
+                </div>
+            </div>
+            <div class="productCardContainer"> <a class="card1" href="#!">
+                    <div class="front1" style="background-image: url(./productImage.png)"> </div>
+                    <div class="back1">
+                        <div>
+                            <p>Lawenda <br>Melisa <br>Koper włoski <br>Dziewanna </p>
+                            <button1 class="button1">Kup teraz</button1>
+                        </div>
+                    </div>
+                </a>
+                <div class="productCardContainer__text">
+                    <h1>Herbata</h1>
+                    <p>Lawendowa łąka</p>
+                    <h1>30G</h1>
+                </div>
+            </div>
+            <div class="productCardContainer"> <a class="card1" href="#!">
+                    <div class="front1" style="background-image: url(./productImage.png)"> </div>
+                    <div class="back1">
+                        <div>
+                            <p>Lawenda <br>Melisa <br>Koper włoski <br>Dziewanna </p>
+                            <button1 class="button1">Kup teraz</button1>
+                        </div>
+                    </div>
+                </a>
+                <div class="productCardContainer__text">
+                    <h1>Herbata</h1>
+                    <p>Lawendowa łąka</p>
+                    <h1>30G</h1>
+                </div>
+            </div>
+            <div class="productCardContainer"> <a class="card1" href="#!">
+                    <div class="front1" style="background-image: url(./productImage.png)"> </div>
+                    <div class="back1">
+                        <div>
+                            <p>Lawenda <br>Melisa <br>Koper włoski <br>Dziewanna </p>
+                            <button1 class="button1">Kup teraz</button1>
+                        </div>
+                    </div>
+                </a>
+                <div class="productCardContainer__text">
+                    <h1>Herbata</h1>
+                    <p>Lawendowa łąka</p>
+                    <h1>30G</h1>
+                </div>
+            </div>
+            <div class="productCardContainer"> <a class="card1" href="#!">
+                    <div class="front1" style="background-image: url(./productImage.png)"> </div>
+                    <div class="back1">
+                        <div>
+                            <p>Lawenda <br>Melisa <br>Koper włoski <br>Dziewanna </p>
+                            <button1 class="button1">Kup teraz</button1>
+                        </div>
+                    </div>
+                </a>
+                <div class="productCardContainer__text">
+                    <h1>Herbata</h1>
+                    <p>Lawendowa łąka</p>
+                    <h1>30G</h1>
+                </div>
+            </div>
+            <div class="productCardContainer"> <a class="card1" href="#!">
+                    <div class="front1" style="background-image: url(./productImage.png)"> </div>
+                    <div class="back1">
+                        <div>
+                            <p>Lawenda <br>Melisa <br>Koper włoski <br>Dziewanna </p>
+                            <button1 class="button1">Kup teraz</button1>
+                        </div>
+                    </div>
+                </a>
+                <div class="productCardContainer__text">
+                    <h1>Herbata</h1>
+                    <p>Lawendowa łąka</p>
+                    <h1>30G</h1>
+                </div>
+            </div>
+        </div>
+        <a class="allCardsContainer__button" href="#">Wszystkie</a>
+    </div>
+
+    <div class="slider26">
+        <div class="slider26ContentBox">
+            <p class="blackC">Nasi specjaliści</p>
+            <h1 class='title26'>Profesor Jan Nowak</h1>
+            <div class="slider26ContentBoxStripe"></div>
+            <p class="desc26">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quisquam! Minus suscipit
+                cupiditate, ab
+                veritatis repudiandae aliquid praesentium ipsum doloribus nisi voluptate natus veniam sint optio
+                eveniet, delectus quibusdam accusamus nulla saepe voluptas aspernatur. Nostrum?</p>
+        </div>
+        <div class="slider26ImageBox">
+            <button class="slider26BTN">
+                <</button> <button class="slider26BTN">>
+            </button>
+        </div>
+    </div>
+
+    <div class="popularProductsContainer popularProductsContainer--margin">
+        <p class="popularProductsContainer--text">Blog</p>
+        <h1>Najnowsze wpisy</h1>
+        <div class="slider26ContentBoxStripe" style="margin: 10px 0 5px 0; height: 1px;"></div>
+        <div class="blogItemsContainer">
+            <div class="blogItem">
+                <img src="./Frame.png" alt="blogItemBG">
+                <div class="blogItem__content">
+                    <h1>Glutation</h1>
+                    <div class="blogItem__whiteStripe"></div>
+                    <p class='blogItemLongText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quisquam!
+                        Minus suscipit
+                        cupiditate, ab veritatis repudiandae aliquid praesentium ipsum doloribus nisi voluptate natus
+                        veniam sint optio eveniet, delectus.</p>
+
+                </div>
+            </div>
+
+            <div class="blogItem">
+                <img src="./Frame.png" alt="blogItemBG">
+                <div class="blogItem__content">
+                    <h1>Glutation</h1>
+                    <div class="blogItem__whiteStripe"></div>
+                    <p class='blogItemLongText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quisquam!
+                        Minus suscipit
+                        cupiditate, ab veritatis repudiandae aliquid praesentium ipsum doloribus nisi voluptate natus
+                        veniam sint optio eveniet, delectus.</p>
+
+                </div>
+            </div>
+
+            <div class="blogItem">
+                <img src="./Frame.png" alt="blogItemBG">
+                <div class="blogItem__content">
+                    <h1>Glutation</h1>
+                    <div class="blogItem__whiteStripe"></div>
+                    <p class='blogItemLongText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quisquam!
+                        Minus suscipit
+                        cupiditate, ab veritatis repudiandae aliquid praesentium ipsum doloribus nisi voluptate natus
+                        veniam sint optio eveniet, delectus.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const btnPrevious = document.querySelector(".slider26BTN:nth-child(1)"),
+            btnNext = document.querySelector(".slider26BTN:nth-child(2)"),
+            slider26 = document.querySelector(".slider26ImageBox"),
+            sliderToChangeBG = document.querySelector(".slider26"),
+            title26 = document.querySelector(".title26"),
+            desc26 = document.querySelector(".desc26"),
+
+            titleList = ["Profesor Jan Nowak", "Nisi voluptate natus", "Delectus quibusdam"],
+            descList = [
+                "1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quisquam! Minus suscipit cupiditate, abveritatis repudiandae aliquid praesentium ipsum doloribus nisi voluptate natus veniam sint optio eveniet, delectus quibusdam accusamus nulla saepe voluptas aspernatur. Nostrum?",
+                "2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quisquam! Minus suscipit cupiditate, abveritatis repudiandae aliquid praesentium ipsum doloribus nisi voluptate natus veniam sint optio eveniet, delectus quibusdam accusamus nulla saepe voluptas aspernatur. Nostrum?",
+                "3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quisquam! Minus suscipit cupiditate, abveritatis repudiandae aliquid praesentium ipsum doloribus nisi voluptate natus veniam sint optio eveniet, delectus quibusdam accusamus nulla saepe voluptas aspernatur. Nostrum?"
+            ],
+            imagePath = [
+                "./image5.png",
+                "https://images.pexels.com/photos/2709386/pexels-photo-2709386.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                "https://images.pexels.com/photos/3680316/pexels-photo-3680316.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            ];
+
+        let actualSlide = 0;
+
+        const offBtnColor = "rgb(180, 175, 175)",
+
+            changeRecurringValues = (index, bgColor) => {
+                slider26.style.backgroundImage = `url(${imagePath[index]})`, sliderToChangeBG.style.backgroundColor =
+                    bgColor,
+                    title26.textContent = titleList[index], desc26.textContent = descList[index]
+            },
+
+            checkSlide = () => {
+                0 == actualSlide ?
+                    (btnPrevious.style.color = offBtnColor,
+                        changeRecurringValues(0, "#CFD3A9")) :
+                    1 == actualSlide ?
+                    (changeRecurringValues(1, "rgb(205, 202, 0)"),
+                        btnPrevious.style.color = "white", btnNext.style.color = "white") :
+                    2 == actualSlide && (changeRecurringValues(2, "rgb(66, 255, 2 39)"),
+                        btnNext.style.color = offBtnColor)
+            };
+
+        btnPrevious.addEventListener("click", () => {
+                0 != actualSlide && (actualSlide--, checkSlide())
+            }),
+            btnNext.addEventListener("click", () => {
+                3 != actualSlide && (actualSlide++, checkSlide())
+            });
+    </script>
+
 </body>
 
 </html>

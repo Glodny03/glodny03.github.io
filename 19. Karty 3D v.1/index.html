@@ -31,7 +31,7 @@
         background-attachment: fixed;
     }
 
-    .content1 {
+    .content {
         display: flex;
         margin: 0 auto;
         justify-content: center;
@@ -70,7 +70,7 @@
         margin-bottom: 3rem;
     }
 
-    .card1 {
+    .card {
         color: inherit;
         cursor: pointer;
         width: calc(33% - 2rem);
@@ -83,19 +83,19 @@
     }
 
     @media screen and (max-width: 800px) {
-        .card1 {
+        .card {
             width: calc(50% - 2rem);
         }
     }
 
     @media screen and (max-width: 500px) {
-        .card1 {
+        .card {
             width: 100%;
         }
     }
 
-    .front1,
-    .back1 {
+    .front,
+    .back {
         display: flex;
         border-radius: 6px;
         background-position: center;
@@ -112,7 +112,7 @@
         transition: ease-in-out 600ms;
     }
 
-    .front1 {
+    .front {
         background-size: cover;
         padding: 2rem;
         font-size: 1.618rem;
@@ -124,7 +124,7 @@
 
     }
 
-    .front1:before {
+    .front:before {
         position: absolute;
         display: block;
         content: '';
@@ -137,52 +137,52 @@
         z-index: -1;
     }
 
-    .card1:hover .front1 {
+    .card:hover .front {
         transform: rotateY(180deg);
     }
 
-    .card1:nth-child(even):hover .front1 {
+    .card:nth-child(even):hover .front {
         transform: rotateY(-180deg);
     }
 
-    .back1 {
+    .back {
         background: rgb(255, 255, 255);
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         transform: rotateY(-180deg);
         padding: 0 2em;
     }
 
-    .back1 .button1 {
+    .back .button {
         background: linear-gradient(135deg, #1a9be6, #1a57e6);
     }
 
-    .back1 .button1:before {
+    .back .button:before {
         box-shadow: 0 0 10px 10px rgba(26, 87, 230, 0.25);
         background-color: rgba(26, 87, 230, 0.25);
     }
 
-    .card1:hover .back1 {
+    .card:hover .back {
         transform: rotateY(0deg);
     }
 
-    .card1:nth-child(even) .back1 {
+    .card:nth-child(even) .back {
         transform: rotateY(180deg);
     }
 
-    .card1:nth-child(even) .back1 .button1 {
+    .card:nth-child(even) .back .button {
         background: linear-gradient(135deg, #45f3ff, #3e29ff);
     }
 
-    .card1:nth-child(even) .back1 .button1:before {
+    .card:nth-child(even) .back .button:before {
         box-shadow: 0 0 10px 10px rgba(51, 233, 224, 0.25);
         background-color: rgba(26, 230, 230, 0.25);
     }
 
-    .card1:nth-child(even):hover .back1 {
+    .card:nth-child(even):hover .back {
         transform: rotateY(0deg);
     }
 
-    .button1 {
+    .button {
         transform: translateZ(40px);
         cursor: pointer;
         -webkit-backface-visibility: hidden;
@@ -198,7 +198,7 @@
         transition: 300ms ease;
     }
 
-    .button1:before {
+    .button:before {
         transition: 300ms ease;
         position: absolute;
         display: block;
@@ -213,64 +213,64 @@
         top: 16px;
     }
 
-    .button1:hover {
+    .button:hover {
         transform: translateZ(55px);
     }
 
-    .button1:hover:before {
+    .button:hover:before {
         transform: translateZ(-55px);
     }
 
-    .button1:active {
+    .button:active {
         transform: translateZ(20px);
     }
 
-    .button1:active:before {
+    .button:active:before {
         transform: translateZ(-20px);
         top: 12px;
     }
 </style>
 
 <body>
-    <div class="content1">
+    <div class="content">
       
-        <a class="card1" href="#!">
-            <div class="front1" style="back1ground-image: url(https://images.pexels.com/photos/1122626/pexels-photo-1122626.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)">
+        <a class="card" href="#!">
+            <div class="front" style="background-image: url(https://images.pexels.com/photos/1122626/pexels-photo-1122626.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)">
                 <p>Lorem ipsum dolor </p>
             </div>
-            <div class="back1">
+            <div class="back">
                 <div>
                     <p>Consectetur adipisicing elit.</p>
-                    <p>Provident consectetur!</p><button1
-                        class="button1">Sprawdź</button1>
+                    <p>Provident consectetur!</p><button
+                        class="button">Sprawdź</button>
                 </div>
             </div>
         </a>
 
 
-        <a class="card1" href="#!">
-            <div class="front1" style="back1ground-image: url(https://images.pexels.com/photos/1122626/pexels-photo-1122626.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)">
+        <a class="card" href="#!">
+            <div class="front" style="background-image: url(https://images.pexels.com/photos/1122626/pexels-photo-1122626.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)">
                 <p>Lorem ipsum dolor </p>
             </div>
-            <div class="back1">
+            <div class="back">
                 <div>
                     <p>Consectetur adipisicing elit.</p>
-                    <p>Provident consectetur!</p><button1
-                        class="button1">Sprawdź</button1>
+                    <p>Provident consectetur!</p><button
+                        class="button">Sprawdź</button>
                 </div>
             </div>
         </a>
 
 
-        <a class="card1" href="#!">
-            <div class="front1" style="back1ground-image: url(https://images.pexels.com/photos/1122626/pexels-photo-1122626.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)">
+        <a class="card" href="#!">
+            <div class="front" style="background-image: url(https://images.pexels.com/photos/1122626/pexels-photo-1122626.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)">
                 <p>Lorem ipsum dolor </p>
             </div>
-            <div class="back1">
+            <div class="back">
                 <div>
                     <p>Consectetur adipisicing elit.</p>
-                    <p>Provident consectetur!</p><button1
-                        class="button1">Sprawdź</button1>
+                    <p>Provident consectetur!</p><button
+                        class="button">Sprawdź</button>
                 </div>
             </div>
         </a>
