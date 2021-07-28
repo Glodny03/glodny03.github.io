@@ -1006,7 +1006,7 @@ button {
     margin-top: 20px
 }
 
-.slider26 a { 
+.slider26 a {
     background-color: #fff;
     box-shadow: var(--greyColor);
     width: 120px;
@@ -1017,7 +1017,7 @@ button {
     font-weight: 600;
     color: #3A3A3A;
     text-transform: uppercase;
-cursor: pointer;
+    cursor: pointer;
 }
 
 @media (max-width:650px) {
@@ -1034,4 +1034,79 @@ cursor: pointer;
         height: 100vw;
         background-size: 95vw;
     }
+}
+
+.allProducts__wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: var(--barWidth);
+
+}
+
+.allProducts__item {
+    width: 250px;
+    height: 360px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #fff;
+    font-family: Fahkwang;
+    box-shadow: var(--basicShadow);
+    cursor: pointer !important;
+    position: relative;
+    margin: 10px 0;
+}
+
+.allProducts__addToCart {
+    position:absolute;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 36px;
+    font-family: poppins;
+    font-size: 27px;
+    background: #8de732;
+    background: linear-gradient(90deg, #8de732 0, #aaf261 85%);
+    cursor: pointer; 
+    transition: 0.6s;
+    top: 10px;
+    left: 10px;
+}
+
+.allProducts__addToCart:hover {
+    background: #56ac00;
+
+}
+
+.allProducts__addToCart:active {
+    color: black;
+}
+
+.allProducts__item img {
+    width: 90%;
+}
+
+.allProducts__item h1 {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 3px 0;
+}
+
+.allProducts__item p {
+    font-size: 16px;
+    text-align: center;
+}
+
+.allProducts__smallText {
+    font-size: 12px !important;
+}
+
+.allProducts__item h2 {
+    font-size: 16px;
 }
