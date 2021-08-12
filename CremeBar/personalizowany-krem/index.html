@@ -14,9 +14,11 @@
 
 <body>
     <!-- MENU  -->
-    <div class="cremeBar__menu"> <a href="../stronaGlowna/index.html"> <img class="cremeBar__menu__logo" src="../assets/1logo.png"
-                alt="cremeBarLogo"> </a> <a href="#">Sklep</a> <a href="#">Idea Cremebar</a> <a href="#">Szkolenia</a>
-        <a href="#">Kontakt</a>
+    <div class="cremeBar__menu"> <a href="../stronaGlowna/index.html"> <img class="cremeBar__menu__logo"
+                src="../assets/1logo.png" alt="cremeBarLogo"> </a>
+        <!-- <a href="#">Sklep</a>
+        <a href="#">Idea Cremebar</a> <a href="#">Szkolenia</a>
+        <a href="#">Kontakt</a> -->
         <div class="Eprom_SocialMedia_v1-container">
             <ul class="Eprom_SocialMedia_v1-icons">
                 <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
@@ -24,10 +26,36 @@
                 <li><a href="#"><i class="fas fa-search"></i></a></li>
             </ul>
         </div>
+        <div class="cremeBarMobileBtnMenu">
+            -
+        </div>
+        <div class="cremeBar__fullMobileMenu">
+
+            <div class="cremeBar__categoriesMenu">
+
+                <!-- WAZNE - PRZYCISK DO WYLACZENIA WIDOCZNOSCI -->
+                <button class="cremeBar__categoriesMenu__closeMenu">X</button>
+
+                <div class="cremeBar__categoriesMenu__cell cremeBar--bold"> <a
+                        href="../wszystkieProdukty /index.html">Produkty do gabinetu</a> </div>
+                <div class="cremeBar__categoriesMenu__cell cremeBar--bold"> <a
+                        href="../podgladProduktu/index.html">Personalizowane kremy</a> </div>
+                <div class="cremeBar__categoriesMenu__cell cremeBar--bold"> <a href="#">CORNEOpeel</a> </div>
+                <div class="cremeBar__categoriesMenu__cell"> <a href="#">Produkty do gabinetu</a> </div>
+                <div class="cremeBar__categoriesMenu__cell"> <a href="#">STARTERBox</a> </div>
+                <div class="cremeBar__categoriesMenu__cell"> <a href="#">Mycie</a> </div>
+                <div class="cremeBar__categoriesMenu__cell"> <a href="#">Kuracje witaminowe</a> </div>
+                <div class="cremeBar__categoriesMenu__cell"> <a href="#">Serum liposomowe</a> </div>
+                <div class="cremeBar__categoriesMenu__cell"> <a href="#">Pielęgnacja ciała</a> </div>
+                <div class="cremeBar__categoriesMenu__cell"> <a href="#">Demakijaz</a> </div>
+                <div class="cremeBar__categoriesMenu__cell"> <a href="#">Tonizacja</a> </div>
+                <div class="cremeBar__categoriesMenu__cell"> <a href="#">Pielęgnacja okolic oczu</a> </div>
+            </div>
+        </div>
     </div>
 
     <!-- RZECZY SPECJALNE DLA PERSONALIZOWANY KREM  -->
-    <div class="rowContainer">
+    <!-- <div class="rowContainer">
         <div class="cremeBar__categories__wrapper">
             <div class="cremeBar__categoriesTitle"> Kategorie </div>
             <div class="cremeBar__categoriesMenu">
@@ -809,9 +837,9 @@
                 Dodaj do koszyka </button>
         </div> 
     </div>
-    
+     -->
     <!-- BLOKADA DLA MOBILE   -->
-    <div class="cremeBar__hidden">
+    <!-- <div class="cremeBar__hidden">
         <div class="cremeBar__hidden__card"> <img src="../assets/1logo.png" alt="CremeBarLogo">
             <div class="cremeBar__hidden__Content">
                 <h1>Drogi uzytkowniku</h1>
@@ -819,7 +847,23 @@
                 <p>Ta podstrona nie jest dostępna na urządzeniach mobilnych<p>
             </div><button>Powrót</button>
         </div>
-    </div>
+    </div> -->
+
+    <script>
+        // ZAMYKANIE I OTWIERANIE MENU NA MOBILE  
+
+        const cremeBarMobileBtnMenu = document.querySelector('.cremeBarMobileBtnMenu');
+        const cremeBar__fullMobileMenu = document.querySelector('.cremeBar__fullMobileMenu');
+        const cremeBar__categoriesMenu__closeMenu = document.querySelector('.cremeBar__categoriesMenu__closeMenu');
+
+        cremeBarMobileBtnMenu.addEventListener('click', () => {
+            cremeBar__fullMobileMenu.classList.add("cremeBar__fullMobileMenu--active");
+        })
+
+        cremeBar__categoriesMenu__closeMenu.addEventListener('click', () => {
+            cremeBar__fullMobileMenu.classList.remove("cremeBar__fullMobileMenu--active");
+        })
+    </script>
 </body>
 
 </html>

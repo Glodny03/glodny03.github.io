@@ -408,6 +408,8 @@ body {
     z-index: 2;
 }
 
+
+
 .cremeBar__menu a {
     color: #000;
     text-decoration: none;
@@ -435,7 +437,7 @@ body {
     display: inline-block;
     margin: .15em;
     position: relative;
-    font-size: 14px
+    font-size: 11px
 }
 
 .Eprom_SocialMedia_v1-icons i {
@@ -539,6 +541,66 @@ body {
 
 .personalizedCream__classicButton--margin {
     margin-top: 15px
+}
+
+.cremeBarMobileBtnMenu {
+    /* display: none; */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-size: 50px;
+    font-weight: 300;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    bottom:-30px;
+    background-color: #fafafa;
+    box-shadow: var(--basicShadow);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+
+/* CALA WERSJA MOBILNA MENU  */
+.cremeBar__fullMobileMenu {
+    position: fixed;
+    top:0px;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    transition: 0.4s;
+    transform: translateY(-100%);
+    /* display: none; */
+}
+
+.cremeBar__fullMobileMenu--active {
+    transform: translateY(0%);
+    
+}
+
+.cremeBar__categoriesMenu button {
+    position: fixed;
+    font-family: Poppins;
+    font-weight: 700;
+    top: 10px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid var(--greenCB);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 /* KATEGORIE  */
@@ -869,20 +931,6 @@ article {
 h2 {
     font-size: 32px;
     margin-bottom: 12px;
-}
-
-button {
-    position: fixed;
-    top: 12px;
-    left: 12px;
-    padding: 8px 12px;
-    font-size: 10px;
-    text-transform: uppercase;
-    color: white;
-    background-color: black;
-    border: none;
-    outline: none;
-    cursor: pointer;
 }
 
 .slider18Wrapper--button {

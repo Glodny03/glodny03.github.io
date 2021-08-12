@@ -1,5 +1,3 @@
-
-
 @media (min-width:650px) {
     .personalizedCream__bar {
         height: 49px;
@@ -83,5 +81,34 @@
 
     .cremeBar__hidden {
         display: flex
+    }
+
+    .Eprom_SocialMedia_v1-icons i {
+        top: 11px;
+        left: 12px
+    }
+
+    .Eprom_SocialMedia_v1-icons a:before {
+        width: 40px;
+        height: 40px
+    }
+
+    /* ROZSZERZENIE MOZLIWYCH KATEGORII DLA WERSJI MOBILNEJ */
+    .cremeBar__categoriesMenu {
+        background-color: rgb(255, 255, 255);
+        width: 100vw;
+        border-radius: 10px;
+        box-shadow: var(--basicShadow);
+        color: #3A3A3A;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+    }
+
+    /* WYŚRODKOWANIE KOMÓRKI MENU MOBILE  */
+    .cremeBar__categoriesMenu__cell {
+        width: 100%;
+        text-align: center;
+        padding: 17px 0;
+        border-bottom: 2px solid #E1E1E1;
     }
 }

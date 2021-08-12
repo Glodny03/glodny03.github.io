@@ -30,6 +30,7 @@
         height: 400px;
         width: 100vw;
         border: 2px solid red;
+        position: relative;
     }
 
     .buttons34 {
@@ -37,6 +38,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        bottom: 0;
     }
 
     .btn34 {
@@ -46,18 +49,36 @@
         border: none;
         color: #fff;
         font-size: 25px;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+
+    .btn34:hover {
+        color: black;
+    }
+
+    .textContent34TextArea {
+        font-family: 'Poppins';
+        width: 60%;
+        height: 90%;
+        
     }
 </style>
 
 <body>
     <div class="textContent34">
-
+        <div class="textContent34TextArea">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi voluptate veniam, eius perspiciatis
+                commodi animi veritatis qui voluptatem recusandae quia modi beatae error nemo voluptatibus facilis quod
+                iste sit! Architecto aut, debitis perspiciatis obcaecati nihil enim dicta odio totam quidem.</p>
+        </div>
         <div class="buttons34">
             <button class="btn34">One</button>
             <button class="btn34">Two</button>
             <button class="btn34">Three</button>
             <button class="btn34">Four</button>
         </div>
+
     </div>
 
     <script>
@@ -74,7 +95,6 @@
         buttons34.forEach(element => {
             element.style.backgroundColor = `#${pastelColors[getRandomNumber()]}`;
         });
-        
     </script>
 </body>
 

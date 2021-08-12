@@ -34,7 +34,6 @@
     }
 
     body {
-
         overflow-x: hidden;
     }
 
@@ -167,191 +166,6 @@
         width: 110px;
         height: 2px;
         background-color: #6a725a
-    }
-
-    .page-content {
-        display: grid;
-        grid-gap: 1rem;
-        padding: 1rem;
-        max-width: 1024px;
-        margin: 0 auto;
-        font-family: var(--font-sans)
-    }
-
-    @media (min-width:600px) {
-        .page-content {
-            grid-template-columns: repeat(2, 1fr)
-        }
-    }
-
-    @media (min-width:800px) {
-        .page-content {
-            grid-template-columns: repeat(4, 1fr)
-        }
-    }
-
-    .card {
-        position: relative;
-        display: flex;
-        align-items: flex-end;
-        overflow: hidden;
-        padding: 1rem;
-        width: 100%;
-        text-align: center;
-        color: #f5f5f5;
-        background-color: #f5f5f5;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, .1), 0 2px 2px rgba(0, 0, 0, .1), 0 4px 4px rgba(0, 0, 0, .1), 0 8px 8px rgba(0, 0, 0, .1), 0 16px 16px rgba(0, 0, 0, .1)
-    }
-
-    @media (min-width:600px) {
-        .card {
-            height: 350px
-        }
-    }
-
-    .card:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 110%;
-        background-size: cover;
-        background-position: 0 0;
-        transition: transform calc(var(--d) * 1.5) var(--e);
-        pointer-events: none
-    }
-
-    .card:after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 200%;
-        pointer-events: none;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .009) 11.7%, rgba(0, 0, 0, .034) 22.1%, rgba(0, 0, 0, .072) 31.2%, rgba(0, 0, 0, .123) 39.4%, rgba(0, 0, 0, .182) 46.6%, rgba(0, 0, 0, .249) 53.1%, rgba(0, 0, 0, .32) 58.9%, rgba(0, 0, 0, .394) 64.3%, rgba(0, 0, 0, .468) 69.3%, rgba(0, 0, 0, .54) 74.1%, rgba(0, 0, 0, .607) 78.8%, rgba(0, 0, 0, .668) 83.6%, rgba(0, 0, 0, .721) 88.7%, rgba(0, 0, 0, .762) 94.1%, rgba(0, 0, 0, .79) 100%);
-        transform: translateY(-50%);
-        transition: transform calc(var(--d) * 2) var(--e)
-    }
-
-    .card:nth-child(1):before {
-        background-image: url(1.png)
-    }
-
-    .card:nth-child(2):before {
-        background-image: url(2.png)
-    }
-
-    .card:nth-child(3):before {
-        background-image: url(3.png)
-    }
-
-    .card:nth-child(4):before {
-        background-image: url(4.png)
-    }
-
-    .content {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        padding: 1rem;
-        transition: transform var(--d) var(--e);
-        z-index: 1
-    }
-
-    .content>*+* {
-        margin-top: 1rem
-    }
-
-    .title {
-        font-size: 1.3rem;
-        font-weight: 700;
-        line-height: 1.2
-    }
-
-    .copy {
-        font-family: var(--font-serif);
-        font-size: 1.125rem;
-        font-style: italic;
-        line-height: 1.35
-    }
-
-    .btn {
-        cursor: pointer;
-        margin-top: 1.5rem;
-        padding: .75rem 1.5rem;
-        font-size: .65rem;
-        font-weight: 700;
-        letter-spacing: .025rem;
-        text-transform: uppercase;
-        color: #fff;
-        background-color: #000;
-        border: none
-    }
-
-    .btn:hover {
-        background-color: #0d0d0d
-    }
-
-    .btn:focus {
-        outline: 1px dashed #ff0;
-        outline-offset: 3px
-    }
-
-
-
-    @media (hover:hover) and (min-width:600px) {
-        .card:after {
-            transform: translateY(0)
-        }
-
-        .content {
-            transform: translateY(calc(100% - 4.5rem))
-        }
-
-        .content>:not(.title) {
-            opacity: 0;
-            transform: translateY(1rem);
-            transition: transform var(--d) var(--e), opacity var(--d) var(--e)
-        }
-
-        .card:focus-within,
-        .card:hover {
-            align-items: center
-        }
-
-        .card:focus-within:before,
-        .card:hover:before {
-            transform: translateY(-4%)
-        }
-
-        .card:focus-within:after,
-        .card:hover:after {
-            transform: translateY(-50%)
-        }
-
-        .card:focus-within .content,
-        .card:hover .content {
-            transform: translateY(0)
-        }
-
-        .card:focus-within .content>:not(.title),
-        .card:hover .content>:not(.title) {
-            opacity: 1;
-            transform: translateY(0);
-            transition-delay: calc(var(--d)/ 8)
-        }
-
-        .card:focus-within .content,
-        .card:focus-within .content>:not(.title),
-        .card:focus-within:after,
-        .card:focus-within:before {
-            transition-duration: 0s
-        }
     }
 
     @media (max-width:650px) {
@@ -513,7 +327,8 @@
         }
     }
 
-    .content1 {
+/* START  */
+    .content1Eprom {
         display: flex;
         margin: 0 auto;
         justify-content: center;
@@ -553,7 +368,7 @@
         margin-bottom: 3rem
     }
 
-    .card1 {
+    .card1Eprom {
         color: inherit;
         cursor: pointer;
         width: 250px;
@@ -566,13 +381,13 @@
     }
 
     @media screen and (max-width:800px) {
-        .card1 {
+        .card1Eprom {
             width: calc(50% - 2rem)
         }
     }
 
     @media screen and (max-width:500px) {
-        .card1 {
+        .card1Eprom {
             width: 100%
         }
     }
@@ -618,11 +433,11 @@
         z-index: -1
     }
 
-    .card1:hover .front1 {
+    .card1Eprom:hover .front1 {
         transform: rotateY(180deg)
     }
 
-    .card1:nth-child(even):hover .front1 {
+    .card1Eprom:nth-child(even):hover .front1 {
         transform: rotateY(-180deg)
     }
 
@@ -642,24 +457,24 @@
         background-color: rgba(26, 87, 230, .25)
     }
 
-    .card1:hover .back1 {
+    .card1Eprom:hover .back1 {
         transform: rotateY(0)
     }
 
-    .card1:nth-child(even) .back1 {
+    .card1Eprom:nth-child(even) .back1 {
         transform: rotateY(180deg)
     }
 
-    .card1:nth-child(even) .back1 .button1 {
+    .card1Eprom:nth-child(even) .back1 .button1 {
         background: linear-gradient(135deg, #6b8142, #c4e779)
     }
 
-    .card1:nth-child(even) .back1 .button1:before {
+    .card1Eprom:nth-child(even) .back1 .button1:before {
         box-shadow: 0 0 10px 10px rgba(51, 233, 224, .25);
         background-color: rgba(26, 230, 230, .25)
     }
 
-    .card1:nth-child(even):hover .back1 {
+    .card1Eprom:nth-child(even):hover .back1 {
         transform: rotateY(0)
     }
 
@@ -711,7 +526,7 @@
         top: 12px
     }
 
-    .content1 .card1 {
+    .content1Eprom .card1Eprom {
         font-size: 18px;
         line-height: 1.5;
         font-weight: 300;
@@ -1045,8 +860,6 @@
             display: none;
         }
     }
-
-
 </style>
 
 <body>
@@ -1070,25 +883,32 @@
             </div>
         </div>
         <div class="carousel32">
-            <div class="carousel32item"> <a href="#"> <img src="./kolko.png" alt="buty"> </a>
+            <div class="carousel32item"> <a href="#"> <img
+                        src="http://jedynienatura.izaturska.com.pl/modules/eprom_example/kolko.png" alt="buty"> </a>
                 <h1>Mieszanki <br>herbat</h1>
             </div>
-            <div class="carousel32item"> <a href="#"> <img src="./kolko.png" alt="buty"> </a>
+            <div class="carousel32item"> <a href="#"> <img
+                        src="http://jedynienatura.izaturska.com.pl/modules/eprom_example/kolko.png" alt="buty"> </a>
                 <h1>Mieszanki <br>herbat</h1>
             </div>
-            <div class="carousel32item"> <a href="#"> <img src="./kolko.png" alt="buty"> </a>
+            <div class="carousel32item"> <a href="#"> <img
+                        src="http://jedynienatura.izaturska.com.pl/modules/eprom_example/kolko.png" alt="buty"> </a>
                 <h1>Mieszanki <br>herbat</h1>
             </div>
-            <div class="carousel32item"> <a href="#"> <img src="./kolko.png" alt="buty"> </a>
+            <div class="carousel32item"> <a href="#"> <img
+                        src="http://jedynienatura.izaturska.com.pl/modules/eprom_example/kolko.png" alt="buty"> </a>
                 <h1>Mieszanki <br>herbat</h1>
             </div>
-            <div class="carousel32item"> <a href="#"> <img src="./kolko.png" alt="buty"> </a>
+            <div class="carousel32item"> <a href="#"> <img
+                        src="http://jedynienatura.izaturska.com.pl/modules/eprom_example/kolko.png" alt="buty"> </a>
                 <h1>Mieszanki <br>herbat</h1>
             </div>
-            <div class="carousel32item"> <a href="#"> <img src="./kolko.png" alt="buty"> </a>
+            <div class="carousel32item"> <a href="#"> <img
+                        src="http://jedynienatura.izaturska.com.pl/modules/eprom_example/kolko.png" alt="buty"> </a>
                 <h1>Mieszanki <br>herbat</h1>
             </div>
-            <div class="carousel32item"> <a href="#"> <img src="./kolko.png" alt="buty"> </a>
+            <div class="carousel32item"> <a href="#"> <img
+                        src="http://jedynienatura.izaturska.com.pl/modules/eprom_example/kolko.png" alt="buty"> </a>
                 <h1>Mieszanki <br>herbat</h1>
             </div>
         </div>
@@ -1097,14 +917,20 @@
             <h1>Autorskie mieszanki herbat</h1>
             <div class="slider26ContentBoxStripe" style="margin: 10px 0 5px 0; height: 1.3px;"></div>
         </div>
+
+
+
+
         <div class="allCardsContainer">
-            <div class="content1">
-                <div class="productCardContainer"> <a class="card1" href="#!">
-                        <div class="front1" style="background-image: url(./productImage.png)"> </div>
+            <div class="content1Eprom">
+                <div class="productCardContainer"> <a class="card1Eprom" href="#!">
+                        <div class="front1"
+                            style="background-image: url(http://jedynienatura.izaturska.com.pl/modules/eprom_example/productImage.png)">
+                        </div>
                         <div class="back1">
                             <div>
                                 <p>Lawenda <br>Melisa <br>Koper włoski <br>Dziewanna </p>
-                                <button1 class="button1">Kup teraz</button1>
+                                <button class="button1">Kup teraz</button>
                             </div>
                         </div>
                     </a>
@@ -1114,12 +940,14 @@
                         <h1>30G</h1>
                     </div>
                 </div>
-                <div class="productCardContainer"> <a class="card1" href="#!">
-                        <div class="front1" style="background-image: url(./productImage.png)"> </div>
+                <div class="productCardContainer"> <a class="card1Eprom" href="#!">
+                        <div class="front1"
+                            style="background-image: url(http://jedynienatura.izaturska.com.pl/modules/eprom_example/productImage.png)">
+                        </div>
                         <div class="back1">
                             <div>
                                 <p>Lawenda <br>Melisa <br>Koper włoski <br>Dziewanna </p>
-                                <button1 class="button1">Kup teraz</button1>
+                                <button class="button1">Kup teraz</button>
                             </div>
                         </div>
                     </a>
@@ -1129,12 +957,14 @@
                         <h1>30G</h1>
                     </div>
                 </div>
-                <div class="productCardContainer"> <a class="card1" href="#!">
-                        <div class="front1" style="background-image: url(./productImage.png)"> </div>
+                <div class="productCardContainer"> <a class="card1Eprom" href="#!">
+                        <div class="front1"
+                            style="background-image: url(http://jedynienatura.izaturska.com.pl/modules/eprom_example/productImage.png)">
+                        </div>
                         <div class="back1">
                             <div>
                                 <p>Lawenda <br>Melisa <br>Koper włoski <br>Dziewanna </p>
-                                <button1 class="button1">Kup teraz</button1>
+                                <button class="button1">Kup teraz</button>
                             </div>
                         </div>
                     </a>
@@ -1144,12 +974,14 @@
                         <h1>30G</h1>
                     </div>
                 </div>
-                <div class="productCardContainer"> <a class="card1" href="#!">
-                        <div class="front1" style="background-image: url(./productImage.png)"> </div>
+                <div class="productCardContainer"> <a class="card1Eprom" href="#!">
+                        <div class="front1"
+                            style="background-image: url(http://jedynienatura.izaturska.com.pl/modules/eprom_example/productImage.png)">
+                        </div>
                         <div class="back1">
                             <div>
                                 <p>Lawenda <br>Melisa <br>Koper włoski <br>Dziewanna </p>
-                                <button1 class="button1">Kup teraz</button1>
+                                <button class="button1">Kup teraz</button>
                             </div>
                         </div>
                     </a>
@@ -1159,12 +991,14 @@
                         <h1>30G</h1>
                     </div>
                 </div>
-                <div class="productCardContainer"> <a class="card1" href="#!">
-                        <div class="front1" style="background-image: url(./productImage.png)"> </div>
+                <div class="productCardContainer"> <a class="card1Eprom" href="#!">
+                        <div class="front1"
+                            style="background-image: url(http://jedynienatura.izaturska.com.pl/modules/eprom_example/productImage.png)">
+                        </div>
                         <div class="back1">
                             <div>
                                 <p>Lawenda <br>Melisa <br>Koper włoski <br>Dziewanna </p>
-                                <button1 class="button1">Kup teraz</button1>
+                                <button class="button1">Kup teraz</button>
                             </div>
                         </div>
                     </a>
@@ -1174,12 +1008,14 @@
                         <h1>30G</h1>
                     </div>
                 </div>
-                <div class="productCardContainer"> <a class="card1" href="#!">
-                        <div class="front1" style="background-image: url(./productImage.png)"> </div>
+                <div class="productCardContainer"> <a class="card1Eprom" href="#!">
+                        <div class="front1"
+                            style="background-image: url(http://jedynienatura.izaturska.com.pl/modules/eprom_example/productImage.png)">
+                        </div>
                         <div class="back1">
                             <div>
                                 <p>Lawenda <br>Melisa <br>Koper włoski <br>Dziewanna </p>
-                                <button1 class="button1">Kup teraz</button1>
+                                <button class="button1">Kup teraz</button>
                             </div>
                         </div>
                     </a>
@@ -1189,12 +1025,14 @@
                         <h1>30G</h1>
                     </div>
                 </div>
-                <div class="productCardContainer"> <a class="card1" href="#!">
-                        <div class="front1" style="background-image: url(./productImage.png)"> </div>
+                <div class="productCardContainer"> <a class="card1Eprom" href="#!">
+                        <div class="front1"
+                            style="background-image: url(http://jedynienatura.izaturska.com.pl/modules/eprom_example/productImage.png)">
+                        </div>
                         <div class="back1">
                             <div>
                                 <p>Lawenda <br>Melisa <br>Koper włoski <br>Dziewanna </p>
-                                <button1 class="button1">Kup teraz</button1>
+                                <button class="button1">Kup teraz</button>
                             </div>
                         </div>
                     </a>
@@ -1204,12 +1042,14 @@
                         <h1>30G</h1>
                     </div>
                 </div>
-                <div class="productCardContainer"> <a class="card1" href="#!">
-                        <div class="front1" style="background-image: url(./productImage.png)"> </div>
+                <div class="productCardContainer"> <a class="card1Eprom" href="#!">
+                        <div class="front1"
+                            style="background-image: url(http://jedynienatura.izaturska.com.pl/modules/eprom_example/productImage.png)">
+                        </div>
                         <div class="back1">
                             <div>
                                 <p>Lawenda <br>Melisa <br>Koper włoski <br>Dziewanna </p>
-                                <button1 class="button1">Kup teraz</button1>
+                                <button class="button1">Kup teraz</button>
                             </div>
                         </div>
                     </a>
@@ -1224,7 +1064,7 @@
         <div class="slider26">
             <div class="slider26ContentBox">
                 <p class="blackC">Nasi specjaliści</p>
-                <h1 class='title26'>Profesor Jan Nowak</h1>
+                <h1 class="title26">Profesor Jan Nowak</h1>
                 <div class="slider26ContentBoxStripe"></div>
                 <p class="desc26">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quisquam! Minus
                     suscipit
@@ -1240,31 +1080,34 @@
             <h1>Najnowsze wpisy</h1>
             <div class="slider26ContentBoxStripe" style="margin: 10px 0 5px 0; height: 1px;"></div>
             <div class="blogItemsContainer">
-                <div class="blogItem"> <img src="./Frame.png" alt="blogItemBG">
+                <div class="blogItem"> <img src="http://jedynienatura.izaturska.com.pl/modules/eprom_example/Frame.png"
+                        alt="blogItemBG">
                     <div class="blogItem__content">
                         <h1>Glutation</h1>
                         <div class="blogItem__whiteStripe"></div>
-                        <p class='blogItemLongText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+                        <p class="blogItemLongText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
                             quisquam!
                             Minus suscipit cupiditate, ab veritatis repudiandae aliquid praesentium ipsum doloribus nisi
                             voluptate natus veniam sint optio eveniet, delectus.</p>
                     </div>
                 </div>
-                <div class="blogItem"> <img src="./Frame.png" alt="blogItemBG">
+                <div class="blogItem"> <img src="http://jedynienatura.izaturska.com.pl/modules/eprom_example/Frame.png"
+                        alt="blogItemBG">
                     <div class="blogItem__content">
                         <h1>Glutation</h1>
                         <div class="blogItem__whiteStripe"></div>
-                        <p class='blogItemLongText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+                        <p class="blogItemLongText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
                             quisquam!
                             Minus suscipit cupiditate, ab veritatis repudiandae aliquid praesentium ipsum doloribus nisi
                             voluptate natus veniam sint optio eveniet, delectus.</p>
                     </div>
                 </div>
-                <div class="blogItem"> <img src="./Frame.png" alt="blogItemBG">
+                <div class="blogItem"> <img src="http://jedynienatura.izaturska.com.pl/modules/eprom_example/Frame.png"
+                        alt="blogItemBG">
                     <div class="blogItem__content">
                         <h1>Glutation</h1>
                         <div class="blogItem__whiteStripe"></div>
-                        <p class='blogItemLongText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+                        <p class="blogItemLongText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
                             quisquam!
                             Minus suscipit cupiditate, ab veritatis repudiandae aliquid praesentium ipsum doloribus nisi
                             voluptate natus veniam sint optio eveniet, delectus.</p>
@@ -1278,35 +1121,6 @@
             <i class="fas fa-shopping-cart"></i>
         </a>
     </div>
-
-    <!-- {block name='header_nav'}
-  <nav class="header-nav">
-    <div class="container">
-      <div class="row">
-        <div class="hidden-sm-down">
-          <div class="col-md-5 col-xs-12">
-            {hook h='displayNav1'}
-          </div>
-          <div class="col-md-7 right-nav">
-              {hook h='displayNav2'}
-          </div>
-        
-        </div>
-       
-        <div class="hidden-md-up text-sm-center mobile">
-          <div class="float-xs-left" id="menu-icon">
-            <i class="material-icons d-inline">&#xE5D2;</i>
-          </div>
-          <div class="float-xs-right" id="_mobile_cart"></div>
-          <div class="float-xs-right" id="_mobile_user_info"></div>
-          <div class="top-logo" id="_mobile_logo"></div>
-          <div class="clearfix"></div>
-        </div>
-      </div>
-    </div>
-  </nav>
-{/block} -->
-
     <script>
         // CALA KARTA
         const blogItem = document.querySelector('blogItem');
