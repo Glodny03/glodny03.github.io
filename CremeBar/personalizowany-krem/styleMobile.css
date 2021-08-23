@@ -11,6 +11,10 @@
     .personalizedCream__miniMobilePanel {
         display: none
     }
+
+    .mobile {
+        display: none;
+    }
 }
 
 @media (max-width:650px) {
@@ -105,6 +109,26 @@
     }
 
     /* WYŚRODKOWANIE KOMÓRKI MENU MOBILE  */
+    .cremeBar__categoriesMenu__cell {
+        width: 100%;
+        text-align: center;
+        padding: 17px 0;
+        border-bottom: 2px solid #E1E1E1;
+    }
+    .cremeBarMobileBtnMenu { 
+        display: flex;
+    }
+    
+    .deskopt {
+        display: none;
+    }
+
+.cremeBar__fullMobileMenu {
+    display: flex;
+}
+}
+
+@media (max-width: 1000px) {
     .cremeBar__categoriesMenu__cell {
         width: 100%;
         text-align: center;

@@ -8,157 +8,181 @@
     <title>Document</title>
 </head>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;800;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 
     * {
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
+        box-sizing: border-box
     }
 
-    .title {
-        width: 100%;
+    body {
+        overflow-x: hidden
+    }
+
+    .jnIngredientsContainer {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
-        flex-direction: column;
-        font-family: 'Poppins';
-
-
-    }
-
-    .title p {
-        color: black;
-        font-family: 'Poppins';
-    }
-
-    .menu .content {
-        display: flex;
-        justify-content: center;
-        flex-direction: row-reverse;
         flex-wrap: wrap;
-        margin-top: 40px;
-        font-family: 'Poppins';
-
-
+        width: 100vw
     }
 
-    .menu .content .box {
-        width: 340px;
-        margin: 20px;
-        border: 15px solid #fff;
-        box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+    .jnIngredientsContainerItem {
+        font-family: Montserrat;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        max-width: 40vw;
+        margin: 25px 0
     }
 
-    .menu .content .box .imgBx {
-        position: relative;
-        width: 100%;
-        height: 300px;
+    .jnIngredientsContainerItem img {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        margin: 0 30px 0 0
     }
 
-    .menu .content .box .imgBx img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    .jnIngredientsContent h2 {
+        font-weight: 600;
+        font-size: 20px
     }
 
-    .menu .content .box .text {
-        font-family: 'Poppins';
-        padding: 15px 0 5px;
-
+    .jnIngredientsContent h1,
+    .jnIngredientsContent h2 {
+        margin: 9px 0
     }
 
-    .menu .content .box .text h3 {
-        font-weight: 400;
-        font-family: 'Poppins';
-        color: #111;
-
+    .jnIngredientsInformation {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100vw;
+        margin: 20px 0;
+        flex-wrap: wrap;
     }
 
+    .jnIngredientsInformationItem {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
 
-    .btn {
-        font-size: 1em;
-        color: #fff;
-        background: #9019ff;
-        display: inline-block;
-        padding: 10px 30px;
-        margin-top: 20px;
+    .jnIngredientsInformationItem p,
+    .jnIngredientsTitle {
+        color: #434343;
+        font-family: Poppins;
         text-transform: uppercase;
-        text-decoration: none;
-        letter-spacing: 2px;
-        transition: 0.5s;
-        font-family: 'Poppins';
+        font-size: 13px;
+        font-weight: 400;
+        max-width: 200px;
+    }
+
+    .jnIngredientsInformationItem img {
+        margin-right: 15px;
+        width: 65px;
+    }
+
+
+    @media (max-width:650px) {
+        .jnIngredientsContainerItem {
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            align-items: center
+        }
+
+        .jnIngredientsContainerItem img {
+            width: 90px;
+            height: 90px;
+            margin: 0
+        }
+
+        .jnIngredientsInformationItem {
+            margin: 8px 0;
+        }
+    }
+
+    .jnIngredientsTitle {
+        max-width: 100vw;
+        width: 100vw !important;
+        text-align: center;
+        font-weight: 400;
+        font-size: 22px;
+        border-bottom: 1px solid #C4C4C4;
+        padding: 0 0 10px 0;
+
+        padding-top: 15px;
     }
 </style>
 
 <body>
-    <div class="menu" id="menu">
-        <div class="title">
-            <h2 class="titleText">Lorem, ipsum dolor.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <div class="jnIngredientsInformation">
+        <div class="jnIngredientsInformationItem">
+            <img src="https://i.ibb.co/QHFtTGj/204.png" alt="detail">
+            <p>SKŁAD OPRACOWANY PRZEZ KADRĘ SPECIALISTÓW</p>
         </div>
-        <div class="content">
-            <div class="box">
-                <div class="imgBx">
-                    <img
-                        src="https://images.pexels.com/photos/2817430/pexels-photo-2817430.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
-                </div>
-                <div class="text">
-                    <h3>Lorem ipsum dolor sit.</h3>
-                </div>
-            </div>
-            <div class="box">
-                <div class="imgBx">
-                    <img
-                        src="https://images.pexels.com/photos/2817430/pexels-photo-2817430.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
-                </div>
-                <div class="text">
-                    <h3>Lorem ipsum dolor sit.</h3>
-                </div>
-            </div>
-            <div class="box">
-                <div class="imgBx">
-                    <img
-                        src="https://images.pexels.com/photos/2817430/pexels-photo-2817430.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
-                </div>
-                <div class="text">
-                    <h3> Lorem ipsum dolor sit.</h3>
-                </div>
-            </div>
-            <div class="box">
-                <div class="imgBx">
-                    <img
-                        src="https://images.pexels.com/photos/2817430/pexels-photo-2817430.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
-                </div>
-                <div class="text">
-                    <h3>Lorem ipsum dolor sit.</h3>
-                </div>
-            </div>
-            <div class="box">
-                <div class="imgBx">
-                    <img
-                        src="https://images.pexels.com/photos/2817430/pexels-photo-2817430.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
-                </div>
-                <div class="text">
-                    <h3>Lorem ipsum dolor sit.</h3>
-                </div>
-            </div>
-            <div class="box">
-                <div class="imgBx">
-                    <img
-                        src="https://images.pexels.com/photos/2817430/pexels-photo-2817430.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
-                </div>
-                <div class="text">
-                    <h3>Lorem ipsum dolor sit.</h3>
-                </div>
+
+        <div class="jnIngredientsInformationItem">
+            <img src="https://i.ibb.co/QHFtTGj/204.png" alt="detail">
+            <p>SKŁAD OPRACOWANY PRZEZ KADRĘ SPECIALISTÓW</p>
+        </div>
+
+        <div class="jnIngredientsInformationItem">
+            <img src="https://i.ibb.co/QHFtTGj/204.png" alt="detail">
+            <p>SKŁAD OPRACOWANY PRZEZ KADRĘ SPECIALISTÓW</p>
+        </div>
+
+        <div class="jnIngredientsInformationItem">
+            <img src="https://i.ibb.co/QHFtTGj/204.png" alt="detail">
+            <p>SKŁAD OPRACOWANY PRZEZ KADRĘ SPECIALISTÓW</p>
+        </div>
+    </div>
+
+    <div class="jnIngredientsTitle">
+        <p>
+
+            Poznaj składniki
+
+        </p>
+    </div>
+    <div class="jnIngredientsContainer">
+        <div class="jnIngredientsContainerItem">
+            <img src="https://images.pexels.com/photos/227908/pexels-photo-227908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                alt="tea">
+            <div class="jnIngredientsContent">
+                <h2>KMIN RZYMSKI</h2>
+                <p>Pala tkankę tłuszczową i obniża poziom greliny-hormon głodu.</p>
             </div>
         </div>
-        <div class="title">
-            <a href="#" class="btn">View All</a>
+        <div class="jnIngredientsContainerItem">
+            <img src="https://images.pexels.com/photos/227908/pexels-photo-227908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                alt="tea">
+            <div class="jnIngredientsContent">
+                <h2>KMIN RZYMSKI</h2>
+                <p>Pala tkankę tłuszczową i obniża poziom greliny-hormon głodu.</p>
+            </div>
         </div>
+        <div class="jnIngredientsContainerItem">
+            <img src="https://images.pexels.com/photos/227908/pexels-photo-227908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                alt="tea">
+            <div class="jnIngredientsContent">
+                <h2>KMIN RZYMSKI</h2>
+                <p>Pala tkankę tłuszczową i obniża poziom greliny-hormon głodu.</p>
+            </div>
+        </div>
+        <div class="jnIngredientsContainerItem">
+            <img src="https://images.pexels.com/photos/227908/pexels-photo-227908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                alt="tea">
+            <div class="jnIngredientsContent">
+                <h2>KMIN RZYMSKI</h2>
+                <p>Pala tkankę tłuszczową i obniża poziom greliny-hormon głodu.</p>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
